@@ -1,4 +1,4 @@
-program ex13
+program ex13 ! test the git log command
         implicit none
         real ::x,y,ratio,totaln,cont
         integer :: i
