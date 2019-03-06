@@ -1,11 +1,12 @@
 program main
       implicit none
-      real :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp
-      integer ::i,s1,s2,k,cont
+      real :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp,t
+      real, parameter :: k=1.3806488E+23
+      integer ::i,s1,s2,cont
       real,external :: exchange,efield,r
-
       
-      dx=1
+      print*, "type the temperature that you want (in K):"
+      read*,t 
       j=1.
       b=0
       cont=0
@@ -19,9 +20,7 @@ program main
       call random_number(y)
       y=y*10+1
       x(int(y))=-1
-      end do
-
-      print*,x
+      end do                            ! now we have x(10
 
       call hamil(j,b,x,h1)
       print*,h1
@@ -29,20 +28,23 @@ program main
       10 continue
       call random_number(y)
       y=y*10+1
-      cont=cont+1
 
       x(int(y))=-1*x(int(y))
 
       call hamil(j,b,x,h2)
 
       if (r(h1,h2) .gt. 1) then
-              print*,"energy difference:-","  possibility:",r(h1,h2),"Hamiltonian:",h2
+              !print*,"energy difference:-","  possibility:",r(h1,h2),"Hamiltonian:",h2
+              cont=cont+1
+              print*,"-  ","time step:",cont,"hamiltonian:",h2
               h1=h2
               goto 10
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2)) then
-                      print*,"energy difference:+",tmp,"with the possibility:",r(h1,h2),"Hamiltonian:",h2
+                      cont=cont+1
+                      !print*,"energy difference:+",tmp,"with the possibility:",r(h1,h2),"Hamiltonian:",h2
+                      print*,"  +","time step:",cont,"Hamiltonian:",h2
                       h1=h2
               else
                       h1=h1
@@ -67,8 +69,8 @@ end function
 
 real function r(h1,h2)
         implicit none
-        real :: h1,h2
-        r=exp(h1-h2)
+        real :: h1,h2,k,t
+        r=exp((h1-h2)/(k*t))
 end function
 
 subroutine hamil(j,b,x,h)
