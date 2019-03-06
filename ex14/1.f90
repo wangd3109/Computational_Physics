@@ -1,29 +1,50 @@
 program main
       implicit none
-      real :: dx,x(10),h,j,b,y,summation1,summation2
-      integer ::i,s1,s2,k
-      real,external :: exchange,efield
+      real :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp
+      integer ::i,s1,s2,k,cont
+      real,external :: exchange,efield,r
 
 
       dx=1
       j=1.
       b=0
+      cont=0
 
       do i=1,10
       x(i)=1
       end do
 
-      call hamil(j,b,x,h)
-
-
       call random_seed()
+
+      call hamil(j,b,x,h1)
+      print*,h1
+
+      10 continue
       call random_number(y)
       y=y*10+1
+      cont=cont+1
 
-      x(int(y))=-1
+      x(int(y))=-1*x(int(y))
 
-      call hamil(j,b,x,h)
-!      print
+      call hamil(j,b,x,h2)
+      print*,cont
+
+      if (r(h1,h2) .gt. 1) then
+              print*,"accepted","energy difference:",h2-h1,"possibility:",r(h1,h2)
+              h1=h2
+              goto 10
+      else 
+              call random_number(tmp)
+              if (tmp .lt. r(h1,h2)) then
+                      print*,"accepted","energy difference:",h2-h1,tmp,"with the possibility:",r(h1,h2)
+                      h1=h2
+              else
+                      print*,"rejected",h1-h2,r(h1,h2)
+                      h1=h1
+              end if
+
+              goto 10
+      end if
 
 end program main
 
@@ -76,7 +97,5 @@ subroutine hamil(j,b,x,h)
 
         h=-j*summation1-b*summation2
         
-        print*,"Hamiltonian:",h
-
 end subroutine hamil
 
