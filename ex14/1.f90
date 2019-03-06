@@ -4,7 +4,7 @@ program main
       integer ::i,s1,s2,k,cont
       real,external :: exchange,efield,r
 
-
+      
       dx=1
       j=1.
       b=0
@@ -15,6 +15,13 @@ program main
       end do
 
       call random_seed()
+      do i=1,5
+      call random_number(y)
+      y=y*10+1
+      x(int(y))=-1
+      end do
+
+      print*,x
 
       call hamil(j,b,x,h1)
       print*,h1
@@ -27,19 +34,17 @@ program main
       x(int(y))=-1*x(int(y))
 
       call hamil(j,b,x,h2)
-      print*,cont
 
       if (r(h1,h2) .gt. 1) then
-              print*,"accepted","energy difference:",h2-h1,"possibility:",r(h1,h2)
+              print*,"energy difference:-","  possibility:",r(h1,h2),"Hamiltonian:",h2
               h1=h2
               goto 10
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2)) then
-                      print*,"accepted","energy difference:",h2-h1,tmp,"with the possibility:",r(h1,h2)
+                      print*,"energy difference:+",tmp,"with the possibility:",r(h1,h2),"Hamiltonian:",h2
                       h1=h2
               else
-                      print*,"rejected",h1-h2,r(h1,h2)
                       h1=h1
               end if
 
