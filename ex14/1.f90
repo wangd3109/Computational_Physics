@@ -4,9 +4,9 @@ program main
       integer ::i,s1,s2,cont
       real,external :: exchange,efield,r
       
-      t=1
-      j=1.
-      b=2
+      t=1       ! temperature
+      j=1.      ! exchange parameter
+      b=2       ! electric field
       cont=0
 
       do i=1,10
