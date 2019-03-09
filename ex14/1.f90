@@ -1,12 +1,13 @@
 program main
       implicit none
-      real :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp,t
+      real :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp,t,m
       real, parameter :: k=1.3806488E+23
       integer ::i,s1,s2,cont
       real,external :: exchange,efield,r
       
-      print*, "type the temperature that you want (in K):"
-      read*,t 
+!      print*, "type the temperature that you want (in K):"
+!      read*,t 
+      t=1000
       j=1.
       b=0
       cont=0
@@ -26,6 +27,7 @@ program main
       print*,h1
 
       10 continue
+      m=0
       call random_number(y)
       y=y*10+1
 
@@ -36,15 +38,17 @@ program main
       if (r(h1,h2) .gt. 1) then
               !print*,"energy difference:-","  possibility:",r(h1,h2),"Hamiltonian:",h2
               cont=cont+1
-              print*,"-  ","time step:",cont,"hamiltonian:",h2
+              call mag(x,m)
+              print*,"-  ","time step:",cont,"hamiltonian:",h2,"magnetization:",m
               h1=h2
               goto 10
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2)) then
                       cont=cont+1
+                      call mag(x,m)
                       !print*,"energy difference:+",tmp,"with the possibility:",r(h1,h2),"Hamiltonian:",h2
-                      print*,"  +","time step:",cont,"Hamiltonian:",h2
+                      print*,"+  ","time step:",cont,"Hamiltonian:",h2,"magnetization:",m
                       h1=h2
               else
                       h1=h1
@@ -105,4 +109,14 @@ subroutine hamil(j,b,x,h)
         h=-j*summation1-b*summation2
         
 end subroutine hamil
+
+subroutine mag(x,m)
+        implicit none
+        real :: x(10),m
+        integer :: i
+
+        do i=1,10
+        m=m+x(i)
+        end do
+end subroutine mag
 
