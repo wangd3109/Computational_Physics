@@ -1,12 +1,12 @@
 program main
       implicit none
-      real(8) :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp,t,m,p,a
+      real(8) :: dx,x(10),h,j,b,y,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
       integer ::i,s1,s2,cont
       real,external :: exchange,efield,r
       
       t=1
       j=1.
-      b=0
+      b=2
       cont=0
 
       do i=1,10
@@ -21,7 +21,13 @@ program main
       end do                            ! now we have the lattice x(10)
 
       call hamil(j,b,x,h1)
-      print*,"Hamiltonian_initial:",h1,"x",x
+      call mag(x,m)
+      summationh=h1
+      summationm=m
+      cont=1
+      print*,x
+      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",m
+      
 
       10 continue
       m=0
@@ -35,22 +41,32 @@ program main
       if (h2 .le. h1) then
               cont=cont+1
               call mag(x,m)
-              print*,"-  ","energy decrease:",h1-h2,h1,h2,r(h1,h2,t)
+              summationh=summationh+h2
+              summationm=summationm+m
+              print*,x
+              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",m
               h1=h2
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2,t)) then
                       cont=cont+1
                       call mag(x,m)
-                      print*, "+  ","energy decrease:",h1-h2,h1,h2,r(h1,h2,t),tmp
+                      summationh=summationh+h2
+                      summationm=summationm+m
+                      print*,x
+                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",m
                       h1=h2
               else
-                      print*,h2,tmp
+!                      print*,h2,tmp
                       x(int(y))=-1*x(int(y))
               end if
       end if
 
-      if (cont .lt. 50) goto 10
+      if (cont .lt. 1000) goto 10
+       
+      averageh=summationh/1000
+      averagem=summationm/1000
+      print* ,averageh,averagem
 
 end program main
 
