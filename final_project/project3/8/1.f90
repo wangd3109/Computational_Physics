@@ -1,6 +1,6 @@
 program main
       implicit none
-      real(8) :: x(8),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
+      real(8) :: x(8),j,b,randomn,summation1,mag,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
       integer ::i,s1,s2,cont,steps
       real,external :: exchange,efield,r
       
@@ -8,7 +8,7 @@ program main
       j=1.      ! exchange parameter
       b=0       ! electric field
       cont=0
-      steps=1000
+      steps=100000
 
       do i=1,8          !lattice
       x(i)=1
@@ -21,10 +21,9 @@ program main
       x(int(randomn))=-1
       end do                            ! now we have the lattice x(10)
 
-      call hamil(j,b,x,h1)
-      call mag(x,m)
+      call hamil(j,b,x,mag,h1)
       summationh=h1
-      summationm=m
+      summationm=mag
       cont=1
 !      print*,x
       print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",m
@@ -37,13 +36,12 @@ program main
 
       x(int(randomn))=-1*x(int(randomn))                    !随机翻转某一位置的自旋
 
-      call hamil(j,b,x,h2)
+      call hamil(j,b,x,mag,h2)
 
       if (h2 .le. h1) then
               cont=cont+1
-              call mag(x,m)
               summationh=summationh+h2
-              summationm=summationm+m
+              summationm=summationm+mag
 !              print*,x
               print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",m
               h1=h2
@@ -51,14 +49,12 @@ program main
               call random_number(tmp)
               if (tmp .lt. r(h1,h2,t)) then
                       cont=cont+1
-                      call mag(x,m)
                       summationh=summationh+h2
-                      summationm=summationm+m
+                      summationm=summationm+mag
 !                      print*,x
                       print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",m
                       h1=h2
               else
-!                      print*,h2,tmp
                       x(int(randomn))=-1*x(int(randomn))
               end if
       end if
@@ -89,14 +85,14 @@ real function r(h1,h2,t)
         r=exp((h1-h2)/t)
 end function
 
-subroutine hamil(j,b,x,h)
+subroutine hamil(j,b,x,mag,h)
         implicit none
-        real(8) :: x(8),h,j,b,summation1,summation2         !lattice
+        real(8) :: x(8),h,j,b,summation1,mag         !lattice
         integer :: i,s1,s2
         real,external :: exchange, efield
 
         summation1=0
-        summation2=0
+        mag=0
         h=0
         
         do i=1,8                                             !lattice
@@ -114,21 +110,11 @@ subroutine hamil(j,b,x,h)
 
         do i=1,8                                               !lattice
         s1=x(i)
-        summation2=summation2+efield(s1)
+        mag=mag+efield(s1)
         end do
 
 
-        h=-j*summation1-b*summation2
+        h=-j*summation1-b*mag
         
 end subroutine hamil
-
-subroutine mag(x,m)
-        implicit none
-        real(8) :: x(8),m                                      !lattice
-        integer :: i
-
-        do i=1,8                                               !lattice
-        m=m+x(i)
-        end do
-end subroutine mag
 
