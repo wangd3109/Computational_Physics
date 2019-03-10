@@ -1,6 +1,6 @@
 program main
       implicit none
-      real(8) :: x(10),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
+      real(8) :: x(8),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
       integer ::i,s1,s2,cont,steps
       real,external :: exchange,efield,r
       
@@ -10,14 +10,14 @@ program main
       cont=0
       steps=1000
 
-      do i=1,10
+      do i=1,8          !lattice
       x(i)=1
       end do
 
       call random_seed()
       do i=1,10/2
       call random_number(randomn)
-      randomn=randomn*10+1
+      randomn=randomn*8+1              !lattice
       x(int(randomn))=-1
       end do                            ! now we have the lattice x(10)
 
@@ -33,7 +33,7 @@ program main
       10 continue
       m=0
       call random_number(randomn)
-      randomn=randomn*10+1
+      randomn=randomn*8+1               !lattice
 
       x(int(randomn))=-1*x(int(randomn))                    !随机翻转某一位置的自旋
 
@@ -91,7 +91,7 @@ end function
 
 subroutine hamil(j,b,x,h)
         implicit none
-        real(8) :: x(10),h,j,b,summation1,summation2         !这里x没有问题？
+        real(8) :: x(8),h,j,b,summation1,summation2         !lattice
         integer :: i,s1,s2
         real,external :: exchange, efield
 
@@ -99,12 +99,12 @@ subroutine hamil(j,b,x,h)
         summation2=0
         h=0
         
-        do i=1,10
-        if (i .ne. 10) then
+        do i=1,8                                             !lattice
+        if (i .ne. 8) then                                    !lattice
                 s1=x(i)
                 s2=x(i+1)
         else
-                s1=x(10)
+                s1=x(8)                                        !lattice
                 s2=x(1)
         end if
 
@@ -112,7 +112,7 @@ subroutine hamil(j,b,x,h)
         end do
 
 
-        do i=1,10
+        do i=1,8                                               !lattice
         s1=x(i)
         summation2=summation2+efield(s1)
         end do
@@ -124,10 +124,10 @@ end subroutine hamil
 
 subroutine mag(x,m)
         implicit none
-        real(8) :: x(10),m
+        real(8) :: x(8),m                                      !lattice
         integer :: i
 
-        do i=1,10
+        do i=1,8                                               !lattice
         m=m+x(i)
         end do
 end subroutine mag
