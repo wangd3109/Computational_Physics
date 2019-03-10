@@ -1,49 +1,54 @@
 program main
       implicit none
-      real(8) :: x(8),j,b,randomn,summation1,mag,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
-      integer ::i,s1,s2,cont,steps
+      real(8) :: lattice(8,8),jex,b,randomx,randomy,summation1,mag,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem
+      integer ::i,j,s1,s2,cont,steps,grid
       real,external :: exchange,efield,r
       
-      t=1       ! temperature
-      j=1.      ! exchange parameter
+      t=0.1     ! temperature
+      jex=1.      ! exchange parameter
       b=0       ! electric field
       cont=0
-      steps=100000
+      steps=1000
+      grid=8
 
-      do i=1,8          !lattice
-      x(i)=1
+      do i=1,grid          !lattice
+      do j=1,grid
+      lattice(i,j)=1
+      end do
       end do
 
       call random_seed()
-      do i=1,10/2
-      call random_number(randomn)
-      randomn=randomn*8+1              !lattice
-      x(int(randomn))=-1
+      do i=1,64/2                               ! specify how many spins you want to flip
+      call random_number(randomx)
+      call random_number(randomy)
+      randomx=randomx*grid+1              !lattice
+      randomy=randomy*grid+1
+      lattice(int(randomx),int(randomy))=-1
       end do                            ! now we have the lattice x(10)
 
-      call hamil(j,b,x,mag,h1)
+      call hamil(jex,b,lattice,mag,h1)
       summationh=h1
       summationm=mag
       cont=1
-!      print*,x
-      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",m
-      
+      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
 
       10 continue
       m=0
-      call random_number(randomn)
-      randomn=randomn*8+1               !lattice
+      call random_number(randomx)
+      call random_number(randomy)
+      randomx=randomx*grid+1               !lattice
+      randomy=randomy*grid+1
 
-      x(int(randomn))=-1*x(int(randomn))                    !随机翻转某一位置的自旋
+      lattice(int(randomx),int(randomy))=-1      !随机翻转某一位置的自旋
 
-      call hamil(j,b,x,mag,h2)
+
+      call hamil(jex,b,lattice,mag,h2)
 
       if (h2 .le. h1) then
               cont=cont+1
               summationh=summationh+h2
               summationm=summationm+mag
-!              print*,x
-              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",m
+              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag,"energy difference:",h2-h1,r(h1,h2,t)
               h1=h2
       else 
               call random_number(tmp)
@@ -51,11 +56,11 @@ program main
                       cont=cont+1
                       summationh=summationh+h2
                       summationm=summationm+mag
-!                      print*,x
-                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",m
+                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"energy difference:",h2-h1,r(h1,h2,t),tmp
                       h1=h2
               else
-                      x(int(randomn))=-1*x(int(randomn))
+                      print*,"rejection, energy difference:+", h2-h1,"magnetization:",mag, r(h1,h2,t),tmp
+                      lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
               end if
       end if
 
@@ -67,10 +72,10 @@ program main
 
 end program main
 
-real function exchange(a,b)
+real function exchange(s0,su,sd,sl,sr)
         implicit none
-        integer :: a,b
-        exchange=a*b
+        integer :: s0,su,sd,sl,sr
+        exchange=s0*(su+sd+sl+sr)
 end function
 
 real function efield(a)
@@ -85,36 +90,89 @@ real function r(h1,h2,t)
         r=exp((h1-h2)/t)
 end function
 
-subroutine hamil(j,b,x,mag,h)
+subroutine hamil(jex,b,lattice,mag,h)
         implicit none
-        real(8) :: x(8),h,j,b,summation1,mag         !lattice
-        integer :: i,s1,s2
+        real(8) :: lattice(8,8),h,jex,b,summation1,mag         !lattice
+        integer :: i,j,s0,su,sd,sl,sr,grid
         real,external :: exchange, efield
 
         summation1=0
         mag=0
         h=0
+        grid=8                  !是不是没必要写，因为在主程序里已经有了
         
-        do i=1,8                                             !lattice
-        if (i .ne. 8) then                                    !lattice
-                s1=x(i)
-                s2=x(i+1)
-        else
-                s1=x(8)                                        !lattice
-                s2=x(1)
+        do i=1,grid                                           !lattice
+        do j=1,grid
+        s0=lattice(i,j)
+        if (i .eq. 1) then
+                if (j .eq. 1) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,grid)
+                        sl=lattice(grid,j)
+                        sr=lattice(i+1,j)
+                else if (j .gt. 1 .and. j .lt. grid) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(grid,j)
+                        sr=lattice(i+1,j)
+                else if (j .eq. grid) then
+                        su=lattice(i,1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(grid,j)
+                        sr=lattice(i+1,j)
+                end if
+        else if (i .gt. 1 .and. i .lt. grid) then
+                if (j .eq. 1) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,grid)
+                        sl=lattice(i-1,j)
+                        sr=lattice(i+1,j)
+                else if (j .gt. 1 .and. j .lt. grid) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(i-1,j)
+                        sr=lattice(i+1,j)
+                else if (j .eq. grid) then
+                        su=lattice(i,1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(i-1,j)
+                        sr=lattice(i+1,j)
+                end if
+        else if (i .eq. grid) then
+                if ( j .eq. 1) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,grid)
+                        sl=lattice(i-1,j)
+                        sr=lattice(1,j)
+                else if (j .gt. 1 .and. j .lt. grid) then
+                        su=lattice(i,j+1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(i-1,j)
+                        sr=lattice(1,j)
+                else if (j .eq. grid) then
+                        su=lattice(i,1)
+                        sd=lattice(i,j-1)
+                        sl=lattice(i-1,j)
+                        sr=lattice(1,j)
+
+                end if
         end if
 
-        summation1=summation1+exchange(s1,s2)
+        summation1=summation1+exchange(s0,su,sd,sl,sr)
+        summation1=summation1/2
+        end do
         end do
 
 
-        do i=1,8                                               !lattice
-        s1=x(i)
-        mag=mag+efield(s1)
+        do i=1,grid                                               !lattice
+        do j=1,grid
+        s0=lattice(i,j)
+        mag=mag+efield(s0)
+        end do
         end do
 
 
-        h=-j*summation1-b*mag
+        h=-jex*summation1-b*mag
         
 end subroutine hamil
 
