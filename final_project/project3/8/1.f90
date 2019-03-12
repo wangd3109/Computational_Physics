@@ -4,10 +4,10 @@ program main
       integer ::i,s1,s2,cont,steps,grid,k
       real,external :: exchange,efield,r
  
-      do k=1,30     
-      t=0.4*k       ! temperature
+      do k=0,10     
+      t=2.      ! temperature
       j=1.      ! exchange parameter
-      b=0       ! electric field
+      b=1.*k       ! electric field
       cont=0
       steps=10000
       grid=10
@@ -68,7 +68,7 @@ program main
        
       averageh=summationh/steps
       averagem=summationm/steps
-      print* ,t,averageh,averagem
+      print* ,"temperature",t,"electronic field:", b,averageh,averagem
 
       end do
 
