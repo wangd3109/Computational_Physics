@@ -1,14 +1,15 @@
 program main
       implicit none
       real(8) :: x(10),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem,mag
-      integer ::i,s1,s2,cont,steps,grid
+      integer ::i,s1,s2,cont,steps,grid,k
       real,external :: exchange,efield,r
-      
-      t=1       ! temperature
+ 
+      do k=1,30     
+      t=0.4*k       ! temperature
       j=1.      ! exchange parameter
       b=0       ! electric field
       cont=0
-      steps=100000
+      steps=10000
       grid=10
 
       do i=1,grid
@@ -28,7 +29,7 @@ program main
       summationm=mag
       cont=1
 !      print*,x
-      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
+!      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
       
 
       10 continue
@@ -46,7 +47,7 @@ program main
               summationh=summationh+h2
               summationm=summationm+mag
 !              print*,x
-              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag
+!              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag
               h1=h2
       else 
               call random_number(tmp)
@@ -55,8 +56,8 @@ program main
                       summationh=summationh+h2
                       summationm=summationm+mag
 !                      print*,x
-                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag
-                      h1=h2
+!                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag
+!                      h1=h2
               else
 !                      print*,h2,r(h1,h2,t),tmp
                       x(int(randomn))=-1*x(int(randomn))
@@ -67,7 +68,9 @@ program main
        
       averageh=summationh/steps
       averagem=summationm/steps
-      print* ,averageh,averagem
+      print* ,t,averageh,averagem
+
+      end do
 
 end program main
 
