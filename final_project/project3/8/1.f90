@@ -1,6 +1,6 @@
 program main
       implicit none
-      real(8) :: x(10),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem,mag
+      real(8) :: lattice(8,8),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem,mag
       integer ::i,s1,s2,cont,steps,grid,k
       real,external :: exchange,efield,r
  
@@ -33,7 +33,7 @@ program main
       
 
       10 continue
-      m=0
+!      m=0
       call random_number(randomn)
       randomn=randomn*grid+1
 
