@@ -1,15 +1,15 @@
 program main
       implicit none
-      real(8) :: x(100),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem,mag
+      real(8) :: x(10),j,b,randomn,summation1,summation2,h1,h2,tmp,t,m,summationh,summationm,averageh,averagem,mag
       integer ::i,s1,s2,cont,steps,grid
       real,external :: exchange,efield,r
       
-      t=0.3       ! temperature
+      t=1       ! temperature
       j=1.      ! exchange parameter
       b=0       ! electric field
       cont=0
       steps=100000
-      grid=100
+      grid=10
 
       do i=1,grid
       x(i)=1
@@ -24,9 +24,10 @@ program main
 
       call hamil(grid,j,b,x,mag,h1)
       summationh=h1
+      mag=abs(mag)
       summationm=mag
       cont=1
-      print*,x
+!      print*,x
       print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
       
 
@@ -38,12 +39,13 @@ program main
       x(int(randomn))=-1*x(int(randomn))                    !随机翻转某一位置的自旋
 
       call hamil(grid,j,b,x,mag,h2)
+      mag=abs(mag)
 
       if (h2 .le. h1) then
               cont=cont+1
               summationh=summationh+h2
               summationm=summationm+mag
- !             print*,x
+!              print*,x
               print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag
               h1=h2
       else 
@@ -56,7 +58,7 @@ program main
                       print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag
                       h1=h2
               else
-!                      print*,h2,tmp
+!                      print*,h2,r(h1,h2,t),tmp
                       x(int(randomn))=-1*x(int(randomn))
               end if
       end if
@@ -89,7 +91,7 @@ end function
 
 subroutine hamil(grid,j,b,x,mag,h)
         implicit none
-        real(8) :: x(100),h,j,b,summation1,mag        !这里x没有问题？
+        real(8) :: x(10),h,j,b,summation1,mag        !这里x没有问题？
         integer :: i,s1,s2,grid
         real,external :: exchange, efield
 
