@@ -4,9 +4,9 @@ program main
       integer ::i,j,s1,s2,cont,steps,grid
       real,external :: exchange,efield,r
       
-      t=0.1     ! temperature
+      t=2.     ! temperature
       jex=1.      ! exchange parameter
-      b=0       ! electric field
+      b=0.       ! electric field
       cont=0
       steps=1000
       grid=8
@@ -18,7 +18,7 @@ program main
       end do
 
       call random_seed()
-      do i=1,64/2                               ! specify how many spins you want to flip
+      do i=1,grid/2                               ! specify how many spins you want to flip
       call random_number(randomx)
       call random_number(randomy)
       randomx=randomx*grid+1              !lattice
@@ -26,14 +26,15 @@ program main
       lattice(int(randomx),int(randomy))=-1
       end do                            ! now we have the lattice x(10)
 
-      call hamil(jex,b,lattice,mag,h1)
+      print*,lattice
+      call hamil(grid,jex,b,lattice,mag,h1)
       summationh=h1
       summationm=mag
       cont=1
       print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
 
       10 continue
-      m=0
+      mag=0
       call random_number(randomx)
       call random_number(randomy)
       randomx=randomx*grid+1               !lattice
@@ -42,7 +43,7 @@ program main
       lattice(int(randomx),int(randomy))=-1      !随机翻转某一位置的自旋
 
 
-      call hamil(jex,b,lattice,mag,h2)
+      call hamil(grid,jex,b,lattice,mag,h2)
 
       if (h2 .le. h1) then
               cont=cont+1
@@ -56,10 +57,10 @@ program main
                       cont=cont+1
                       summationh=summationh+h2
                       summationm=summationm+mag
-                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"energy difference:",h2-h1,r(h1,h2,t),tmp
+                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"energy difference:",h2-h1,"r",r(h1,h2,t),tmp
                       h1=h2
               else
-                      print*,"rejection, energy difference:+", h2-h1,"magnetization:",mag, r(h1,h2,t),tmp
+                      print*,"rejection, energy difference:+", h2-h1,"magnetization:",mag, "r",r(h1,h2,t),tmp
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
               end if
       end if
@@ -90,7 +91,7 @@ real function r(h1,h2,t)
         r=exp((h1-h2)/t)
 end function
 
-subroutine hamil(jex,b,lattice,mag,h)
+subroutine hamil(grid,jex,b,lattice,mag,h)
         implicit none
         real(8) :: lattice(8,8),h,jex,b,summation1,mag         !lattice
         integer :: i,j,s0,su,sd,sl,sr,grid
@@ -99,7 +100,6 @@ subroutine hamil(jex,b,lattice,mag,h)
         summation1=0
         mag=0
         h=0
-        grid=8                  !是不是没必要写，因为在主程序里已经有了
         
         do i=1,grid                                           !lattice
         do j=1,grid
@@ -159,7 +159,6 @@ subroutine hamil(jex,b,lattice,mag,h)
         end if
 
         summation1=summation1+exchange(s0,su,sd,sl,sr)
-        summation1=summation1/2
         end do
         end do
 
@@ -171,7 +170,7 @@ subroutine hamil(jex,b,lattice,mag,h)
         end do
         end do
 
-
+        summation1=summation1/2
         h=-jex*summation1-b*mag
         
 end subroutine hamil
