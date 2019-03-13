@@ -10,7 +10,7 @@ program main
 !      b=1.*k       ! electric field
       b=0.
       cont=0
-      steps=200
+      steps=2000
       grid=8
 
       do i=1,grid
@@ -20,7 +20,7 @@ program main
       end do
 
       call random_seed()
-      do i=1,grid/2
+      do i=1,32
       call random_number(randomx)
       call random_number(randomy)
       randomx=randomx*grid+1
