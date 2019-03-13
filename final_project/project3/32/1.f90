@@ -1,19 +1,19 @@
 program main
       implicit none
-      real(8) :: lattice(8,8),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
+      real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
       integer ::i,j,s1,s2,cont,steps,grid,k
       real,external :: exchange,efield,r
  
-      do k=1,20  
+      do k=1,20     
 	call cpu_time(start)
       !t=4
-      t=1*k      ! temperature
+      t=1.*k      ! temperature
       jex=1.      ! exchange parameter
 !      b=1.*k       ! electric field
       b=0.
       cont=0
       steps=1000
-      grid=8
+      grid=32
 
       do i=1,grid
       do j=1,grid
@@ -22,7 +22,7 @@ program main
       end do
 
       call random_seed()
-      do i=1,32
+      do i=1,grid**2/2
       call random_number(randomx)
       call random_number(randomy)
       randomx=randomx*grid+1
@@ -106,7 +106,7 @@ end function
 
 subroutine hamil(grid,jex,b,lattice,mag,h)
         implicit none
-        real(8) :: lattice(8,8),h,jex,b,summation1,mag        !这里x没有问题？
+        real(8) :: lattice(32,32),h,jex,b,summation1,mag        !这里x没有问题？
         integer :: i,j,s0,su,sd,sl,sr,grid
         real,external :: exchange, efield
 
