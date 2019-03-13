@@ -4,13 +4,13 @@ program main
       integer ::i,j,s1,s2,cont,steps,grid,k
       real,external :: exchange,efield,r
  
-!      do k=0,10     
-      t=1.      ! temperature
+      do k=1,300     
+      t=1*k      ! temperature
       jex=1.      ! exchange parameter
 !      b=1.*k       ! electric field
       b=0.
       cont=0
-      steps=100
+      steps=200
       grid=8
 
       do i=1,grid
@@ -35,7 +35,7 @@ program main
       summationm=mag
       cont=1
 !      print*,
-      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
+!      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
       
 
       10 continue
@@ -54,7 +54,7 @@ program main
               summationh=summationh+h2
               summationm=summationm+mag
               !print*,lattice
-              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
+!              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
               h1=h2
       else 
               call random_number(tmp)
@@ -63,7 +63,7 @@ program main
                       summationh=summationh+h2
                       summationm=summationm+mag
                       !print*,lattice
-                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
+!                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
 !                      h1=h2
               else
 !                      print*,h2,r(h1,h2,t),tmp
@@ -77,7 +77,7 @@ program main
       averagem=summationm/steps
       print* ,"temperature",t,"electronic field:", b,averageh,averagem
 
-     ! end do
+      end do
 
 end program main
 
