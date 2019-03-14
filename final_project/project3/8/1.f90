@@ -11,7 +11,7 @@ program main
       jex=1.      ! exchange parameter
       b=0.        ! electron field
       cont=0
-      steps=2000
+      steps=3000
       grid=8
 
       write(filename,*) k
