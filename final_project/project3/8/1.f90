@@ -12,7 +12,7 @@ program main
 !      b=1.*k       ! electric field
       b=0.
       cont=0
-      steps=1000
+      steps=2000
       grid=8
 
       do i=1,grid
