@@ -18,7 +18,7 @@ set ylabel font ",24"
 set arrow 1 from -1 to 1 nohead
 set title "in 1000 steps"
 plot \
-'./8/data_1000steps' u 2:6 w l lt 8 lw 3 lc 3 t "8" ,\
-'./16/data_1000steps' u 2:6 w l lt 8 lw 3 lc 3 t "16" ,\
+'./8/data_1000steps' u 2:6 w l lt 8 lw 3 lc 1 t "8" ,\
+'./16/data_1000steps' u 2:6 w l lt 8 lw 3 lc 2 t "16" ,\
 './32/data_1000steps' u 2:6 w l lt 8 lw 3 lc 3 t "32" ,\
 
