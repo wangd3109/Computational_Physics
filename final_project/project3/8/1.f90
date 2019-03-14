@@ -2,6 +2,7 @@ program main
       implicit none
       real(8) :: lattice(8,8),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
       integer ::i,j,s1,s2,cont,steps,grid,k
+      character (len=100) :: filename
       real,external :: exchange,efield,r
  
       do k=1,20  
@@ -14,6 +15,12 @@ program main
       cont=0
       steps=2000
       grid=8
+
+      write(filename,*) k 
+      print*,filename
+      filename='./t'//trim(adjustl(filename))//''
+      open(k,file=filename)
+      
 
       do i=1,grid
       do j=1,grid
@@ -38,6 +45,7 @@ program main
       cont=1
 !      print*,
 !      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
+      write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 
       10 continue
@@ -72,8 +80,11 @@ program main
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
               end if
       end if
-
+      
+      write(k,*) h2,mag
       if (cont .lt. steps) goto 10
+      
+      close(k)
        
       averageh=summationh/steps
       averageh=averageh/(grid**2)
