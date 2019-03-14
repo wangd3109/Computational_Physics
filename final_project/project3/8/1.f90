@@ -2,6 +2,7 @@ program main
       implicit none
       real(8) :: lattice(8,8),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
       integer ::i,j,s1,s2,cont,steps,grid,k
+	character (len=20) :: filename
       real,external :: exchange,efield,r
  
       do k=1,20  
@@ -73,7 +74,14 @@ program main
               end if
       end if
 
+	write (filename,*) k
+	filename='./'//trim(adjustl(filename))//'.txt'
+	open (k,file=filename,status='new')
+	write(k,*), t!, b,h2,mag
+
+
       if (cont .lt. steps) goto 10
+	close(k)
        
       averageh=summationh/steps
       averageh=averageh/(grid**2)
