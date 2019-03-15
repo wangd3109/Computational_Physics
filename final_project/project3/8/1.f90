@@ -6,7 +6,7 @@ program main
       real,external :: exchange,efield,r
  
       do k=1,20 
-i!	call cpu_time(start)
+!	call cpu_time(start)
       t=1*k      ! temperature
       jex=1.      ! exchange parameter
       b=0.        ! electron field
@@ -15,7 +15,6 @@ i!	call cpu_time(start)
       grid=8
 
       write(filename,*) k 
-      print*,filename
       filename='./t'//trim(adjustl(filename))//''
       open(k,file=filename)
       
@@ -41,6 +40,8 @@ i!	call cpu_time(start)
       mag=abs(mag)
       summationm=mag
       cont=1
+	h1=h1/(grid**2)
+	mag=mag/(grid**2)
       write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 
@@ -55,21 +56,24 @@ i!	call cpu_time(start)
       mag=abs(mag)
 
       if (h2 .le. h1) then
-              cont=cont+1
+              !cont=cont+1
               summationh=summationh+h2
               summationm=summationm+mag
               h1=h2
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2,t)) then
-                      cont=cont+1
+              !        cont=cont+1
                       summationh=summationh+h2
                       summationm=summationm+mag
               else
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
               end if
       end if
-      
+     
+	cont=cont+1
+	h2=h2/(grid**2)
+	mag=mag/(grid**2)
       write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag
       if (cont .lt. steps) goto 10
       
