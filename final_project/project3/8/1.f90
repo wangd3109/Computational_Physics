@@ -7,14 +7,14 @@ program main
  
       do k=1,20 
 !	call cpu_time(start)
-      t=1*k      ! temperature
+      t=0.1*k      ! temperature
       jex=1.      ! exchange parameter
       b=0.        ! electron field
       cont=0
       steps=2000
       grid=8
 
-      write(filename,*) k 
+      write(filename,*) k
       filename='./t'//trim(adjustl(filename))//''
       open(k,file=filename)
       
