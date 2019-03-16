@@ -1,6 +1,6 @@
 set terminal  postscript enhanced color font ",20"
 #set palette defined ( 0  "green", 5 "yellow", 10 "red" )
-set output 'figure2.eps'
+set output 'energy.eps'
 set style data linespoints
 unset ztics
 set key reverse

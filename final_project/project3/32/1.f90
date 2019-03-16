@@ -2,18 +2,22 @@ program main
       implicit none
       real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
       integer ::i,j,s1,s2,cont,steps,grid,k
+      character (len=100) :: filename
       real,external :: exchange,efield,r
  
-      do k=1,20     
-	call cpu_time(start)
-      !t=4
-      t=1.*k      ! temperature
+      do k=1,20 
+!	call cpu_time(start)
+      t=0.1*k      ! temperature
       jex=1.      ! exchange parameter
-!      b=1.*k       ! electric field
-      b=0.
+      b=0.        ! electron field
       cont=0
-      steps=2000
+      steps=100000
       grid=32
+
+      write(filename,*) k
+      filename='./t'//trim(adjustl(filename))//''
+      open(k,file=filename)
+      
 
       do i=1,grid
       do j=1,grid
@@ -29,15 +33,16 @@ program main
       randomy=randomy*grid+1
 
       lattice(int(randomx),int(randomy))=-1
-      end do                            ! now we have the lattice x(10)
+      end do                            ! now we have the lattice
 
       call hamil(grid,jex,b,lattice,mag,h1)
       summationh=h1
       mag=abs(mag)
       summationm=mag
       cont=1
-!      print*,
-!      print*,cont,"   ","Hamiltonian:",h1,"Magnetization:",mag
+	h1=h1/(grid**2)
+	mag=mag/(grid**2)
+      write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 
       10 continue
@@ -45,42 +50,41 @@ program main
       call random_number(randomy)
       randomy=randomy*grid+1
       randomx=randomx*grid+1
-!      print*, int(randomx),int(randomy)                                !useful place to print out
       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
 
       call hamil(grid,jex,b,lattice,mag,h2)
       mag=abs(mag)
 
       if (h2 .le. h1) then
-              cont=cont+1
+              !cont=cont+1
               summationh=summationh+h2
               summationm=summationm+mag
-              !print*,lattice
-!              print*,cont,"-  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
               h1=h2
       else 
               call random_number(tmp)
               if (tmp .lt. r(h1,h2,t)) then
-                      cont=cont+1
+              !        cont=cont+1
                       summationh=summationh+h2
                       summationm=summationm+mag
-                      !print*,lattice
-!                      print*,cont, "+  ","Hamiltonian:",h2,"Magnetization:",mag,"r",r(h1,h2,t)
-!                      h1=h2
               else
-!                      print*,h2,r(h1,h2,t),tmp
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
               end if
       end if
-
+     
+	cont=cont+1
+	h2=h2/(grid**2)
+	mag=mag/(grid**2)
+      write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag
       if (cont .lt. steps) goto 10
+      
+      close(k)
        
-      averageh=summationh/steps
-      averageh=averageh/(grid**2)
-      averagem=summationm/steps
-	averagem=averagem/(grid**2)
-	call cpu_time(finish)
-      print* ,"temperature:",t,"electronic_field:", b,averageh,averagem,"cpu_time:",finish-start
+!      averageh=summationh/steps
+!      averageh=averageh/(grid**2)
+!      averagem=summationm/steps
+!	averagem=averagem/(grid**2)
+!	call cpu_time(finish)
+!      print* ,"temperature:",t,"electronic_field:", b,averageh,averagem,"cpu_time:",finish-start
 
       end do
 
