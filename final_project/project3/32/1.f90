@@ -5,7 +5,7 @@ program main
       character (len=100) :: filename
       real,external :: exchange,efield,r
  
-      do k=1,20 
+      do k=1,30 
 !	call cpu_time(start)
       t=0.1*k      ! temperature
       jex=1.      ! exchange parameter
