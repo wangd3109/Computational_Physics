@@ -31,7 +31,7 @@ plot \
 './t11' u 2:4 w l lt 8 lw 3 lc 11 t "11" ,\
 './t12' u 2:4 w l lt 8 lw 3 lc 12 t "12" ,\
 './t13' u 2:4 w l lt 8 lw 3 lc 13 t "13" ,\
-#'./t14' u 2:6 w l lt 8 lw 3 lc 14 t "14" ,\
+'./t20' u 2:6 w l lt 8 lw 3 lc 14 t "20" ,\
 #'./t15' u 2:6 w l lt 8 lw 3 lc 15 t "15" ,\
 #'./t16' u 2:6 w l lt 8 lw 3 lc 16 t "16" ,\
 #'./t17' u 2:6 w l lt 8 lw 3 lc 17 t "17" ,\
