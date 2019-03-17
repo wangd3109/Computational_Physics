@@ -1,6 +1,6 @@
 program main
       implicit none
-      real(8) :: lattice(64,64),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
+      real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
       integer ::i,j,s1,s2,cont,steps,grid,k
       character (len=100) :: filename
       real,external :: exchange,efield,r
@@ -11,8 +11,8 @@ program main
       jex=1.      ! exchange parameter
       b=0.        ! electron field
       cont=0
-      steps=100000
-      grid=64
+      steps=1000000
+      grid=32
 
       write(filename,*) k
       filename='./t'//trim(adjustl(filename))//''
@@ -113,7 +113,7 @@ end function
 
 subroutine hamil(grid,jex,b,lattice,mag,h)
         implicit none
-        real(8) :: lattice(64,64),h,jex,b,summation1,mag        !这里x没有问题？
+        real(8) :: lattice(32,32),h,jex,b,summation1,mag        !这里x没有问题？
         integer :: i,j,s0,su,sd,sl,sr,grid
         real,external :: exchange, efield
 
