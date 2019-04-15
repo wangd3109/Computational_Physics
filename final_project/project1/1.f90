@@ -1,15 +1,16 @@
 program main
         implicit none
-        real ::b,V,E,rmax,angle
+        real ::b,V,E,rmax,angle,rmin
 
         b=1
         V=10
         E=20
         rmax=5
-        
-        call theta(b,rmax,V,E,angle)
 
-        print*, b,angle
+!        call theta(b,rmax,V,E,angle)
+        call getrmin(b,V,E,rmax,rmin)
+
+        print*,rmin
 end program main
 
 subroutine theta(b,rmax,V,E,angle)
@@ -17,17 +18,17 @@ subroutine theta(b,rmax,V,E,angle)
         real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2
         integer :: steps
 
-        call getrmin(b,V,E,rmin)
+        call getrmin(b,V,E,rmax,rmin)
         print*,"rmin:",rmin
         steps=100
         dr1=(rmax-b)/(4.*steps)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
 
-        call inte1(b,r,dr1,summation1)
-        call inte2(r,dr2,summation2)
-        print*,summation1
+!        call inte1(b,r,dr1,summation1)
+!        call inte2(r,dr2,summation2)
+!        print*,summation1
 
-        angle=2*b*(summation1-summation2)
+!        angle=2*b*(summation1-summation2)
 end subroutine theta
 
 real function f1(r,b)                     !第一项1
@@ -90,7 +91,7 @@ subroutine inte2(r,dr2,summation2)         !第二个积分
         end do
 end subroutine inte2
 
-subroutine getrmin(b,V,E,rmin)            !计算rmin
+subroutine getrmin(b,V,E,rmax,rmin)            !计算rmin
         implicit none
         real :: rmin,rmax,dr,b,V,E,tolerance
 
@@ -100,13 +101,18 @@ subroutine getrmin(b,V,E,rmin)            !计算rmin
 
         10 if (1-b**2/rmin**2-V/E .gt. 0) then
                 rmin=rmin-dr
+!                print*,"0",rmin,1-b**2/rmin**2-V/E
+                goto 10
         else if (abs(1-b**2/rmin**2-V/E) .gt. tolerance) then
                 rmin=rmin+dr
+!                print*,"rmin_back:",rmin
                 dr=dr/2.
                 rmin=rmin-dr
+!                print*,"1",rmin,dr
                 goto 10
         else
-                stop
+!                print*,"2",rmin
         end if
+
 end subroutine getrmin
 
