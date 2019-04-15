@@ -24,7 +24,7 @@ subroutine theta(b,rmax,V,E,angle)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
 
         call inte1(b,r,dr1,summation1)
-        call inte2(r,dr2,V,E,summation2)
+        call inte2(r,dr2,summation2)
         print*,summation1
 
         angle=2*b*(summation1-summation2)
@@ -45,16 +45,16 @@ real function term1(r,dr1)                 !第一项2
         term1=(7*f1(r,b)+32*f1(r+dr1,b)+12*f1(r+2*dr1,b)+32*f1(r+3*dr1,b)+7*f1(r+4*dr1,b))*(2*dr1/45)
 end function
 
-real function f2(r,b,V,E)                 !第二项1
+real function f2(r,b)                 !第二项1
         implicit none
         real :: r,b,V,E
 
         f2=(1.-b**2/r**2-V/E)**(-1/2)/r**2
 end function f2
 
-real function term2(r,dr2,V,E)           !第二项2. 这里需不需要E,V的信息？
+real function term2(r,dr2)           !第二项2. 这里需不需要E,V的信息？
         implicit none
-        real :: r,dr2,b,V,E
+        real :: r,dr2,b
         real,external :: f2
 
         term2=(7*f2(r,b)+32*f2(r+dr2,b)+12*f2(r+2*dr2,b)+32*f2(r+3*dr2,b)+7*f2(r+4*dr2,b))*(2*dr2/45)
@@ -75,16 +75,16 @@ subroutine inte1(b,r,dr1,summation1)      !第一个积分
         end do
 end subroutine inte1
 
-subroutine inte2(r,dr2,V,E,summation2)         !第二个积分
+subroutine inte2(r,dr2,summation2)         !第二个积分
         implicit none
-        real ::r,rmin,summation2,dr2,V,E
+        real ::r,rmin,summation2,dr2
         integer ::steps,i
         real,external ::term2
 
         r=rmin
         summation2=0
         do i=1,steps
-        summation2=summation2+term2(r,dr2,V,E)
+        summation2=summation2+term2(r,dr2)
         r=r+4*dr2
         print*,r
         end do
