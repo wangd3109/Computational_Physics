@@ -3,7 +3,7 @@ program main
         real ::b,V,E,rmax,angle,rmin
         real,external :: exact1
 
-        b=0.1
+        b=1
         V=10
         E=20
         rmax=2
@@ -21,7 +21,7 @@ subroutine theta(b,rmax,V,E,angle)
 
         call getrmin(b,V,E,rmax,rmin)
         print*,"rmin:",rmin
-        steps=2000
+        steps=4000
         dr1=(rmax-b)/(4.*steps)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
 
@@ -31,7 +31,7 @@ subroutine theta(b,rmax,V,E,angle)
         do i=1,steps-1
         summation1=summation1+term1(r,dr1)
         r=r+4*dr1
-        print*,"integration1:",i,r,4*dr1,summation1
+        print*,"integration1:",i,r,r+4*dr1,summation1
         end do
 
         call inte1(b,r,dr1,steps,summation1)
@@ -46,7 +46,8 @@ real function f1(r,b)                     !第一项1
         implicit none
         real :: r,b
 
-        f1=(1.-(b**2/r**2))**(-1/2)/r**2
+        !f1=(1.-(b**2/r**2))**(-1/2)/r**2
+        f1=exp(r)
 end function f1
 
 real function term1(r,dr1)                 !第一项2
