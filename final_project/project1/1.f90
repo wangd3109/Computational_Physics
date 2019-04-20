@@ -16,14 +16,23 @@ end program main
 subroutine theta(b,rmax,V,E,angle)
         implicit none
         real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2
-        real,external :: exact1,exact2,exact3
-        integer :: steps
+        real,external :: f1,term1,exact1,exact2,exact3
+        integer :: steps,i
 
         call getrmin(b,V,E,rmax,rmin)
         print*,"rmin:",rmin
         steps=2000
         dr1=(rmax-b)/(4.*steps)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
+
+        r=b
+!        term1=(2*dr1/45)*(7*f1(r,b)+32*f1(r+dr1,b)+12*f1(r+2*dr1,b)+32*f1(r+3*dr1,b)+7*f1(r+4*dr1,b))
+        summation1=0
+        do i=1,steps-1
+        summation1=summation1+term1(r,dr1)
+        r=r+4*dr1
+        print*,"integration1:",i,r,4*dr1,summation1
+        end do
 
         call inte1(b,r,dr1,steps,summation1)
         call inte2(b,r,dr2,E,V,rmin,steps,summation2)
