@@ -16,27 +16,35 @@ end program main
 subroutine theta(b,rmax,V,E,angle)
         implicit none
         real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2
-        real,external :: f1,term1,exact1,exact2,exact3
+        real,external :: f1,term1,term2,exact1,exact2,exact3
         integer :: steps,i
 
         call getrmin(b,V,E,rmax,rmin)
         print*,"rmin:",rmin
-        steps=4000
+        steps=400
         dr1=(rmax-b)/(4.*steps)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
 
         r=b
-!        term1=(2*dr1/45)*(7*f1(r,b)+32*f1(r+dr1,b)+12*f1(r+2*dr1,b)+32*f1(r+3*dr1,b)+7*f1(r+4*dr1,b))
         summation1=0
         do i=1,steps-1
         summation1=summation1+term1(r,dr1)
         r=r+4*dr1
-        print*,"integration1:",i,r,r+4*dr1,summation1
+!        print*,"integration1:",i,r,r+4*dr1,summation1,term1(r,dr1)
+        end do
+
+        r=rmin
+        summation2=0
+        do i=1,steps-1
+        summation2=summation2+term2(r,dr2,E,V)
+        r=r+4*dr2
+        print*,"integration #2:",i,r,r+4*dr2,summation2
         end do
 
         call inte1(b,r,dr1,steps,summation1)
         call inte2(b,r,dr2,E,V,rmin,steps,summation2)
-        print*,"summation1:",summation1,"exact1:",exact1(b,V,E,rmax),"exact2:",exact2(b,V,E,rmax)
+        print*,"summation #1:",summation1,"exact #1:",exact1(b,V,E,rmax)
+        print*,"summation #2:",summation2,"exact #2:",exact3(b,V,E,rmin,rmax)
 
         angle=2*b*(summation1-summation2)
 !        print*,angle
@@ -46,8 +54,8 @@ real function f1(r,b)                     !第一项1
         implicit none
         real :: r,b
 
-        !f1=(1.-(b**2/r**2))**(-1/2)/r**2
-        f1=exp(r)
+        f1=(1.-(b**2/r**2))**(-1/2)/r**2
+        !f1=exp(r)
 end function f1
 
 real function term1(r,dr1)                 !第一项2
@@ -126,6 +134,9 @@ subroutine getrmin(b,V,E,rmax,rmin)            !计算rmin
         else
 !                print*,"2",rmin
         end if
+!        print*,rmin,dr,1-b**2/rmin**2-V/E
+        rmin=rmin+dr
+!        print*,1-b**2/rmin**2-V/E
 
 end subroutine getrmin
 
@@ -142,3 +153,10 @@ real function exact2(b,V,E,rmax)
 
         exact2=atan(sqrt(1-b**2/rmax**2)*rmax/b)/b-atan(sqrt(1-b**2/b**2)*b/b)/b
 end function exact2
+
+real function exact3(b,V,E,rmin,rmax)
+        implicit none
+        real :: b,V,E,rmin,rmax
+
+        exact3=atan(sqrt(-b**2/rmax**2-v/e+1)*rmax/b)/b-atan(sqrt(-b**2/rmin**2-v/e+1)*rmin/b)/b
+end function exact3
