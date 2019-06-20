@@ -1,60 +1,69 @@
 program main
         implicit none
         real ::b,V,E,rmax,angle,rmin
+        integer:: i
         real,external :: exact1
 
-        b=1
-        V=10
-        E=20
-        rmax=2
+        do i=1,19
+        b=0.1*i
+!        b=9.3
+        V=3.
+        E=5.
+        rmax=1.9
 
         call theta(b,rmax,V,E,angle)
-!        call getrmin(b,V,E,rmax,rmin)
+
+        end do
 
 end program main
 
 subroutine theta(b,rmax,V,E,angle)
         implicit none
-        real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2
+        real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2,angle2
         real,external :: f1,term1,term2,exact1,exact2,exact3
         integer :: steps,i
 
         call getrmin(b,V,E,rmax,rmin)
-        print*,"rmin:",rmin
-        steps=400
+!        print*,"rmin:",rmin
+        steps=1000
         dr1=(rmax-b)/(4.*steps)
         dr2=(rmax-rmin)/(4.*steps)  !注意rmin
 
         r=b
         summation1=0
-        do i=1,steps-1
+        do i=1,steps
+        r=b+(i-1)*4*dr1
         summation1=summation1+term1(r,dr1)
-        r=r+4*dr1
-!        print*,"integration1:",i,r,r+4*dr1,summation1,term1(r,dr1)
+!        print*,"integration1:",i,r,"dr:",dr1,r+4*dr1,summation1
         end do
 
         r=rmin
         summation2=0
-        do i=1,steps-1
+        do i=1,steps
+        r=rmin+(i-1)*4*dr2
         summation2=summation2+term2(r,dr2,E,V)
-        r=r+4*dr2
-        print*,"integration #2:",i,r,r+4*dr2,summation2
+!        print*,"integration #2:",i,r,r+4*dr2,summation2
         end do
 
-        call inte1(b,r,dr1,steps,summation1)
-        call inte2(b,r,dr2,E,V,rmin,steps,summation2)
-        print*,"summation #1:",summation1,"exact #1:",exact1(b,V,E,rmax)
-        print*,"summation #2:",summation2,"exact #2:",exact3(b,V,E,rmin,rmax)
+!        call inte1(b,r,dr1,steps,summation1)
+!        call inte2(b,r,dr2,E,V,rmin,steps,summation2)
+!        print*,"summation #1:",summation1,"exact #1:",exact1(b,V,E,rmax)
+!        print*,"summation #2:",summation2,"exact #2:",exact3(b,V,E,rmin,rmax)
 
         angle=2*b*(summation1-summation2)
-!        print*,angle
+        angle2=2*b*(exact1(b,V,E,rmax)-exact3(b,V,E,rmin,rmax))               !analytical solution
+!        angle=angle/3.1415926*360
+
+        print*,"b:",b,"rmin:",rmin,"summation1:",summation1,"angle:",angle,angle2
+       
+!        print*,angle,2*b*(exact1(b,V,E,rmax)-exact3(b,V,E,rmin,rmax))
 end subroutine theta
 
 real function f1(r,b)                     !第一项1
         implicit none
         real :: r,b
 
-        f1=(1.-(b**2/r**2))**(-1/2)/r**2
+        f1=1/r**2/sqrt(1-(b/r)**2)
         !f1=exp(r)
 end function f1
 
@@ -70,7 +79,7 @@ real function f2(r,b,E,V)                 !第二项1
         implicit none
         real :: r,b,V,E
 
-        f2=(1.-b**2/r**2-V/E)**(-1/2)/r**2
+        f2=1/r**2/sqrt(1-(b/r)**2-V/E)
 end function f2
 
 real function term2(r,dr2,E,V)           !第二项2. 这里需不需要E,V的信息？
@@ -147,12 +156,12 @@ real function exact1(b,V,E,rmax)
         exact1=-(asin(b/rmax)-asin(b/b))/b
 end function exact1
 
-real function exact2(b,V,E,rmax)
-        implicit none
-        real :: b,V,E,rmax
-
-        exact2=atan(sqrt(1-b**2/rmax**2)*rmax/b)/b-atan(sqrt(1-b**2/b**2)*b/b)/b
-end function exact2
+!real function exact2(b,V,E,rmax)
+!        implicit none
+!        real :: b,V,E,rmax
+!
+!        exact2=atan(sqrt(1-b**2/rmax**2)*rmax/b)/b-atan(sqrt(1-b**2/b**2)*b/b)/b
+!end function exact2
 
 real function exact3(b,V,E,rmin,rmax)
         implicit none
