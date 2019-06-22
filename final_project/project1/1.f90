@@ -4,12 +4,11 @@ program main
         integer:: i
         real,external :: exact1
 
-        do i=1,19
+        do i=1,100
         b=0.1*i
-!        b=9.3
         V=3.
-        E=5.
-        rmax=1.9
+        E=10.
+        rmax=10
 
         call theta(b,rmax,V,E,angle)
 
@@ -20,7 +19,7 @@ end program main
 subroutine theta(b,rmax,V,E,angle)
         implicit none
         real :: r,b,rmax,V,E,angle,rmin,dr1,dr2,summation1,summation2,angle2
-        real,external :: f1,term1,term2,exact1,exact2,exact3
+        real,external :: f1,term1,term2,exact
         integer :: steps,i
 
         call getrmin(b,V,E,rmax,rmin)
@@ -51,12 +50,10 @@ subroutine theta(b,rmax,V,E,angle)
 !        print*,"summation #2:",summation2,"exact #2:",exact3(b,V,E,rmin,rmax)
 
         angle=2*b*(summation1-summation2)
-        angle2=2*b*(exact1(b,V,E,rmax)-exact3(b,V,E,rmin,rmax))               !analytical solution
-!        angle=angle/3.1415926*360
+        angle2=exact(b,V,E,rmax)
 
-        print*,"b:",b,"rmin:",rmin,"summation1:",summation1,"angle:",angle,angle2
+        print*,"b:",b,"rmin:",rmin,"angle:",angle,"exact:",angle2
        
-!        print*,angle,2*b*(exact1(b,V,E,rmax)-exact3(b,V,E,rmin,rmax))
 end subroutine theta
 
 real function f1(r,b)                     !第一项1
@@ -149,23 +146,11 @@ subroutine getrmin(b,V,E,rmax,rmin)            !计算rmin
 
 end subroutine getrmin
 
-real function exact1(b,V,E,rmax)
+real function exact(b,V,E,rmax)
         implicit none
         real :: b,V,E,rmax
 
-        exact1=-(asin(b/rmax)-asin(b/b))/b
-end function exact1
+        exact=2*(asin(b/(rmax*sqrt(1-V/E)))-asin(b/rmax))
 
-!real function exact2(b,V,E,rmax)
-!        implicit none
-!        real :: b,V,E,rmax
-!
-!        exact2=atan(sqrt(1-b**2/rmax**2)*rmax/b)/b-atan(sqrt(1-b**2/b**2)*b/b)/b
-!end function exact2
+end function exact
 
-real function exact3(b,V,E,rmin,rmax)
-        implicit none
-        real :: b,V,E,rmin,rmax
-
-        exact3=atan(sqrt(-b**2/rmax**2-v/e+1)*rmax/b)/b-atan(sqrt(-b**2/rmin**2-v/e+1)*rmin/b)/b
-end function exact3
