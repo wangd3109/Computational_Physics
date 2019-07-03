@@ -36,4 +36,4 @@ set ylabel "Magnetization"
 set xlabel ""
 unset xtics
 #unset ytics
-plot 'avg_32' u 1:5 w lp lt 2 lw 3 lc 1 pt 8 t "" ,\
+plot 'avg_32' u 1:7 w lp lt 2 lw 3 lc 1 pt 8 t "" ,\

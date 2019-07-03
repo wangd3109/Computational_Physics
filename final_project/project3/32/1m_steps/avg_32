@@ -1,56 +1,56 @@
-5 Averaged_Hamiltonian: -1.99219 Averaged_Magnetization: 53.6468
-6 Averaged_Hamiltonian: -1.99219 Averaged_Magnetization: 27.6147
-7 Averaged_Hamiltonian: -1.99215 Averaged_Magnetization: 17.1836
-8 Averaged_Hamiltonian: -1.99183 Averaged_Magnetization: 12.0341
-9 Averaged_Hamiltonian: -1.99091 Averaged_Magnetization: 9.1143
-10 Averaged_Hamiltonian: -1.98913 Averaged_Magnetization: 7.28929
-11 Averaged_Hamiltonian: -1.98532 Averaged_Magnetization: 6.05642
-12 Averaged_Hamiltonian: -1.9819 Averaged_Magnetization: 5.19132
-13 Averaged_Hamiltonian: -1.97254 Averaged_Magnetization: 4.52756
-14 Averaged_Hamiltonian: -1.95836 Averaged_Magnetization: 4.00572
-15 Averaged_Hamiltonian: -1.94194 Averaged_Magnetization: 3.59227
-16 Averaged_Hamiltonian: -1.92047 Averaged_Magnetization: 3.2479
-17 Averaged_Hamiltonian: -1.8885 Averaged_Magnetization: 2.93916
-18 Averaged_Hamiltonian: -1.84642 Averaged_Magnetization: 2.65941
-19 Averaged_Hamiltonian: -1.80599 Averaged_Magnetization: 2.43119
-20 Averaged_Hamiltonian: -1.74035 Averaged_Magnetization: 2.18141
-21 Averaged_Hamiltonian: -1.64907 Averaged_Magnetization: 1.9023
-22 Averaged_Hamiltonian: -1.5249 Averaged_Magnetization: 1.5636
-23 Averaged_Hamiltonian: -1.35826 Averaged_Magnetization: 1.01548
-24 Averaged_Hamiltonian: -1.24173 Averaged_Magnetization: 0.697132
-25 Averaged_Hamiltonian: -1.10891 Averaged_Magnetization: -0.175943
-26 Averaged_Hamiltonian: -1.03493 Averaged_Magnetization: 0.296749
-27 Averaged_Hamiltonian: -0.956298 Averaged_Magnetization: 0.057393
-28 Averaged_Hamiltonian: -0.892194 Averaged_Magnetization: 0.0471751
-29 Averaged_Hamiltonian: -0.861112 Averaged_Magnetization: 0.0544252
-30 Averaged_Hamiltonian: -0.808283 Averaged_Magnetization: -0.00817506
-31 Averaged_Hamiltonian: -0.778675 Averaged_Magnetization: -0.0168967
-32 Averaged_Hamiltonian: -0.741678 Averaged_Magnetization: 0.0279199
-33 Averaged_Hamiltonian: -0.70776 Averaged_Magnetization: 0.00192615
-34 Averaged_Hamiltonian: -0.677162 Averaged_Magnetization: -0.0139851
-35 Averaged_Hamiltonian: -0.659019 Averaged_Magnetization: -0.0237028
-36 Averaged_Hamiltonian: -0.632378 Averaged_Magnetization: 0.0012694
-37 Averaged_Hamiltonian: -0.616124 Averaged_Magnetization: -0.0117694
-38 Averaged_Hamiltonian: -0.594754 Averaged_Magnetization: 0.000803588
-39 Averaged_Hamiltonian: -0.567144 Averaged_Magnetization: 0.0184026
-40 Averaged_Hamiltonian: -0.55726 Averaged_Magnetization: 0.00894601
-41 Averaged_Hamiltonian: -0.535032 Averaged_Magnetization: 0.0045188
-42 Averaged_Hamiltonian: -0.521612 Averaged_Magnetization: 0.00672673
-43 Averaged_Hamiltonian: -0.501573 Averaged_Magnetization: 0.00305935
-44 Averaged_Hamiltonian: -0.49311 Averaged_Magnetization: -0.0089535
-45 Averaged_Hamiltonian: -0.479614 Averaged_Magnetization: 0.00365984
-46 Averaged_Hamiltonian: -0.471188 Averaged_Magnetization: 0.00622302
-47 Averaged_Hamiltonian: -0.464109 Averaged_Magnetization: -0.000252127
-48 Averaged_Hamiltonian: -0.448754 Averaged_Magnetization: 0.00259989
-49 Averaged_Hamiltonian: -0.437624 Averaged_Magnetization: 0.00160392
-50 Averaged_Hamiltonian: -0.427822 Averaged_Magnetization: -0.00286829
-51 Averaged_Hamiltonian: -0.413341 Averaged_Magnetization: 0.00683966
-52 Averaged_Hamiltonian: -0.4066 Averaged_Magnetization: 0.00771984
-53 Averaged_Hamiltonian: -0.398021 Averaged_Magnetization: -0.0059143
-54 Averaged_Hamiltonian: -0.390383 Averaged_Magnetization: 0.00159111
-55 Averaged_Hamiltonian: -0.388171 Averaged_Magnetization: 0.0053108
-56 Averaged_Hamiltonian: -0.372843 Averaged_Magnetization: 0.000423671
-57 Averaged_Hamiltonian: -0.369351 Averaged_Magnetization: 0.00465628
-58 Averaged_Hamiltonian: -0.359558 Averaged_Magnetization: 0.00166572
-59 Averaged_Hamiltonian: -0.357491 Averaged_Magnetization: 0.00436389
-60 Averaged_Hamiltonian: -0.349982 Averaged_Magnetization: 0.00296621
+5 Averaged_Hamiltonian: -1.99219 Averaged_Magnetization: 53.6468 Specific_Heat: 0
+6 Averaged_Hamiltonian: -1.99219 Averaged_Magnetization: 27.6147 Specific_Heat: 1.67198e-24
+7 Averaged_Hamiltonian: -1.99215 Averaged_Magnetization: 17.1836 Specific_Heat: -1.01743e-24
+8 Averaged_Hamiltonian: -1.99183 Averaged_Magnetization: 12.0341 Specific_Heat: 2.50967e-25
+9 Averaged_Hamiltonian: -1.99091 Averaged_Magnetization: 9.1143 Specific_Heat: -1.69708e-11
+10 Averaged_Hamiltonian: -1.98913 Averaged_Magnetization: 7.28929 Specific_Heat: -1.49157e-14
+11 Averaged_Hamiltonian: -1.98532 Averaged_Magnetization: 6.05642 Specific_Heat: 1.41976e-08
+12 Averaged_Hamiltonian: -1.9819 Averaged_Magnetization: 5.19132 Specific_Heat: -3.8178e-11
+13 Averaged_Hamiltonian: -1.97254 Averaged_Magnetization: 4.52756 Specific_Heat: 3.60871e-08
+14 Averaged_Hamiltonian: -1.95836 Averaged_Magnetization: 4.00572 Specific_Heat: -1.67956e-08
+15 Averaged_Hamiltonian: -1.94194 Averaged_Magnetization: 3.59227 Specific_Heat: 5.73986e-08
+16 Averaged_Hamiltonian: -1.92047 Averaged_Magnetization: 3.2479 Specific_Heat: 4.78746e-09
+17 Averaged_Hamiltonian: -1.8885 Averaged_Magnetization: 2.93916 Specific_Heat: 2.74789e-08
+18 Averaged_Hamiltonian: -1.84642 Averaged_Magnetization: 2.65941 Specific_Heat: 4.34538e-08
+19 Averaged_Hamiltonian: -1.80599 Averaged_Magnetization: 2.43119 Specific_Heat: 2.04223e-08
+20 Averaged_Hamiltonian: -1.74035 Averaged_Magnetization: 2.18141 Specific_Heat: 1.57396e-08
+21 Averaged_Hamiltonian: -1.64907 Averaged_Magnetization: 1.9023 Specific_Heat: 5.99094e-08
+22 Averaged_Hamiltonian: -1.5249 Averaged_Magnetization: 1.5636 Specific_Heat: -1.60513e-07
+23 Averaged_Hamiltonian: -1.35826 Averaged_Magnetization: 1.01548 Specific_Heat: 5.04197e-08
+24 Averaged_Hamiltonian: -1.24173 Averaged_Magnetization: 0.697132 Specific_Heat: 1.0087e-07
+25 Averaged_Hamiltonian: -1.10891 Averaged_Magnetization: -0.175943 Specific_Heat: -3.11287e-08
+26 Averaged_Hamiltonian: -1.03493 Averaged_Magnetization: 0.296749 Specific_Heat: -4.48927e-08
+27 Averaged_Hamiltonian: -0.956298 Averaged_Magnetization: 0.057393 Specific_Heat: 9.3053e-08
+28 Averaged_Hamiltonian: -0.892194 Averaged_Magnetization: 0.0471751 Specific_Heat: 4.9678e-08
+29 Averaged_Hamiltonian: -0.861112 Averaged_Magnetization: 0.0544252 Specific_Heat: -8.90381e-08
+30 Averaged_Hamiltonian: -0.808283 Averaged_Magnetization: -0.00817506 Specific_Heat: 1.55995e-08
+31 Averaged_Hamiltonian: -0.778675 Averaged_Magnetization: -0.0168967 Specific_Heat: -5.82492e-08
+32 Averaged_Hamiltonian: -0.741678 Averaged_Magnetization: 0.0279199 Specific_Heat: -4.79383e-09
+33 Averaged_Hamiltonian: -0.70776 Averaged_Magnetization: 0.00192615 Specific_Heat: 6.87289e-08
+34 Averaged_Hamiltonian: -0.677162 Averaged_Magnetization: -0.0139851 Specific_Heat: -3.50146e-08
+35 Averaged_Hamiltonian: -0.659019 Averaged_Magnetization: -0.0237028 Specific_Heat: -9.23172e-09
+36 Averaged_Hamiltonian: -0.632378 Averaged_Magnetization: 0.0012694 Specific_Heat: -2.93946e-08
+37 Averaged_Hamiltonian: -0.616124 Averaged_Magnetization: -0.0117694 Specific_Heat: 4.45001e-09
+38 Averaged_Hamiltonian: -0.594754 Averaged_Magnetization: 0.000803588 Specific_Heat: -1.17391e-08
+39 Averaged_Hamiltonian: -0.567144 Averaged_Magnetization: 0.0184026 Specific_Heat: 1.31205e-10
+40 Averaged_Hamiltonian: -0.55726 Averaged_Magnetization: 0.00894601 Specific_Heat: -3.47061e-08
+41 Averaged_Hamiltonian: -0.535032 Averaged_Magnetization: 0.0045188 Specific_Heat: -3.71248e-09
+42 Averaged_Hamiltonian: -0.521612 Averaged_Magnetization: 0.00672673 Specific_Heat: 4.81467e-08
+43 Averaged_Hamiltonian: -0.501573 Averaged_Magnetization: 0.00305935 Specific_Heat: 2.2957e-08
+44 Averaged_Hamiltonian: -0.49311 Averaged_Magnetization: -0.0089535 Specific_Heat: -6.18347e-08
+45 Averaged_Hamiltonian: -0.479614 Averaged_Magnetization: 0.00365984 Specific_Heat: 3.17387e-09
+46 Averaged_Hamiltonian: -0.471188 Averaged_Magnetization: 0.00622302 Specific_Heat: 5.17919e-09
+47 Averaged_Hamiltonian: -0.464109 Averaged_Magnetization: -0.000252127 Specific_Heat: 1.31371e-08
+48 Averaged_Hamiltonian: -0.448754 Averaged_Magnetization: 0.00259989 Specific_Heat: 6.49938e-09
+49 Averaged_Hamiltonian: -0.437624 Averaged_Magnetization: 0.00160392 Specific_Heat: -1.16755e-10
+50 Averaged_Hamiltonian: -0.427822 Averaged_Magnetization: -0.00286829 Specific_Heat: -4.00455e-09
+51 Averaged_Hamiltonian: -0.413341 Averaged_Magnetization: 0.00683966 Specific_Heat: -4.7156e-09
+52 Averaged_Hamiltonian: -0.4066 Averaged_Magnetization: 0.00771984 Specific_Heat: -1.84451e-09
+53 Averaged_Hamiltonian: -0.398021 Averaged_Magnetization: -0.0059143 Specific_Heat: -5.56339e-08
+54 Averaged_Hamiltonian: -0.390383 Averaged_Magnetization: 0.00159111 Specific_Heat: -4.31202e-08
+55 Averaged_Hamiltonian: -0.388171 Averaged_Magnetization: 0.0053108 Specific_Heat: -2.14858e-08
+56 Averaged_Hamiltonian: -0.372843 Averaged_Magnetization: 0.000423671 Specific_Heat: -1.26405e-08
+57 Averaged_Hamiltonian: -0.369351 Averaged_Magnetization: 0.00465628 Specific_Heat: 6.1458e-08
+58 Averaged_Hamiltonian: -0.359558 Averaged_Magnetization: 0.00166572 Specific_Heat: -1.22571e-08
+59 Averaged_Hamiltonian: -0.357491 Averaged_Magnetization: 0.00436389 Specific_Heat: 1.36541e-08
+60 Averaged_Hamiltonian: -0.349982 Averaged_Magnetization: 0.00296621 Specific_Heat: -3.40345e-08
