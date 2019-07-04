@@ -32,8 +32,8 @@ set size 0.8,0.4
 #set rmargin 0
 #set tmargin 1
 #set bmargin 0
-set ylabel "Magnetization"
+set ylabel "Specific heat"
 set xlabel ""
 unset xtics
 #unset ytics
-plot 'avg_32' u 1:7 w lp lt 2 lw 3 lc 1 pt 8 t "" ,\
+plot 'avg_32new' u 1:6 w lp lt 2 lw 3 lc 1 pt 8 t "" ,\
