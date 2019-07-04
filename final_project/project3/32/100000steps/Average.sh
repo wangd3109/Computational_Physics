@@ -9,3 +9,5 @@ do
 	  echo $i $e $m >> avg_32
 done
 
+awk 'NR==1{tmp=$3}NR>1{print $0,"\t",$3-tmp;tmp=$3}' avg_32 > avg_32new
+
