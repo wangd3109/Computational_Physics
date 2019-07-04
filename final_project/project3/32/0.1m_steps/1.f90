@@ -5,14 +5,14 @@ program main
       character (len=100) :: filename
       real,external :: exchange,efield,r,p
  
-      do k=5,200,1
+      do k=5,100,1
 !	call cpu_time(start)
 !	k=5
       t=0.1*k      ! temperature
       jex=1.      ! exchange parameter
       b=0.        ! electron field
       cont=0
-      steps=10000
+      steps=100000
       grid=32
 
 	!建立文件名为t+k的文件，记录指定温度下的数据
@@ -50,7 +50,7 @@ program main
       summationm=mag
       cont=1
 	h1=h1/(grid**2)
-	mag=mag*p(h1,t)/(grid**2)
+	mag=mag/(grid**2)
       write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 	!随机翻转一个格点上的磁矩，并计算磁化强度，哈密顿量，循环指定步数
@@ -79,12 +79,13 @@ program main
 				h1=h2
               else
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
+				call hamil(grid,jex,b,lattice,mag,h2)
               end if
       end if
      
 	cont=cont+1
 	h2=h2/(grid**2)
-	mag=mag*p(h2,t)/(grid**2)
+	mag=mag/(grid**2)
 !      print*,cont,"Hamiltonian:",h2,"magnetization:",mag
       write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,p(h2,t)
       if (cont .lt. steps) goto 10
