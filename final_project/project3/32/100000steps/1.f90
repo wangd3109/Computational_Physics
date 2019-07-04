@@ -50,7 +50,7 @@ program main
       summationm=mag
       cont=1
 	h1=h1/(grid**2)
-	mag=mag*p(h1,t)/(grid**2)
+	mag=mag/(grid**2)
       write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 	!随机翻转一个格点上的磁矩，并计算磁化强度，哈密顿量，循环指定步数
@@ -79,12 +79,13 @@ program main
 				h1=h2
               else
                       lattice(int(randomx),int(randomy))=-1*lattice(int(randomx),int(randomy))
+                      call hamil(grid,jex,b,lattice,mag,h2)
               end if
       end if
      
 	cont=cont+1
 	h2=h2/(grid**2)
-	mag=mag*p(h2,t)/(grid**2)
+	mag=mag/(grid**2)
 !      print*,cont,"Hamiltonian:",h2,"magnetization:",mag
       write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,p(h2,t)
       if (cont .lt. steps) goto 10
