@@ -1,11 +1,12 @@
 program main
       implicit none
-      real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish
+      real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish,m2,m4,u
+	real(8) :: m2_avg,m4_avg,e,m
       integer ::i,j,s1,s2,cont,steps,grid,k
       character (len=100) :: filename
       real,external :: exchange,efield,r,p
  
-      do k=5,100,1
+      do k=5,60,1
 !	call cpu_time(start)
 !	k=5
       t=0.1*k      ! temperature
@@ -87,8 +88,28 @@ program main
 	h2=h2/(grid**2)
 	mag=mag/(grid**2)
 !      print*,cont,"Hamiltonian:",h2,"magnetization:",mag
-      write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,p(h2,t)
+      write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,"Mag**4:",mag**4,"Mag**2:",mag**2
+	if (cont .gt. steps/2) then
+		m4=m4+mag**4
+		m2=m2+mag**2
+		e=h2+e
+		m=mag+m
+	else
+		m4=m4
+		m2=m2
+		e=e
+	end if
       if (cont .lt. steps) goto 10
+
+	m4_avg=m4/(steps/2)
+	m2_avg=m2/(steps/2)
+	u=1-(m4_avg)/(3*(m2_avg))
+	e=e/(steps/2)
+	m=m/(steps/2)
+	
+	write(k,*) "Temperature:",t,"Hamiltonian:",e,"Magnetization:",m,"4th_order_cumulant:",u
+
+
       
       close(k)
 
