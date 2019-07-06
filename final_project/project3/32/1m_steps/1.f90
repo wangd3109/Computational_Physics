@@ -5,7 +5,8 @@ program main
       integer ::i,j,s1,s2,cont,steps,grid,k
       character (len=100) :: filename,datafile
       real,external :: exchange,efield,r,p
- 
+
+	open(unit=1,file='data.dat') 
       do k=5,60,1
 !	call cpu_time(start)
 !	k=5
@@ -20,7 +21,6 @@ program main
 !      write(filename,*) k
 !      filename='./t'//trim(adjustl(filename))//''
 !	filename=datafile
-      open(unit=1,file='data.dat')
       
 	
 	!初始化lattice
@@ -110,11 +110,6 @@ program main
 	
 	write(1,*) "Temperature:",t,"Hamiltonian:",e,"Magnetization:",m,"4th_order_cumulant:",u
 
-
-      
-      close(unit=1)
-
-
 	!决定删除这些，把做平均的步骤放到了之前       
 !      averageh=summationh/steps
 !      averageh=averageh/(grid**2)
@@ -124,6 +119,7 @@ program main
 !      print* ,"temperature:",t,"electronic_field:", b,averageh,averagem,"cpu_time:",finish-start
 
       end do
+	close(unit=1)
 
 end program main
 
