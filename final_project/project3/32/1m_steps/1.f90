@@ -3,7 +3,7 @@ program main
       real(8) :: lattice(32,32),jex,b,randomx,randomy,h1,h2,tmp,t,summationh,summationm,averageh,averagem,mag,start,finish,m2,m4,u
 	real(8) :: m2_avg,m4_avg,e,m
       integer ::i,j,s1,s2,cont,steps,grid,k
-      character (len=100) :: filename
+      character (len=100) :: filename,datafile
       real,external :: exchange,efield,r,p
  
       do k=5,60,1
@@ -17,9 +17,10 @@ program main
       grid=32
 
 	!建立文件名为t+k的文件，记录指定温度下的数据
-      write(filename,*) k
-      filename='./t'//trim(adjustl(filename))//''
-      open(k,file=filename)
+!      write(filename,*) k
+!      filename='./t'//trim(adjustl(filename))//''
+!	filename=datafile
+      open(unit=1,file='data.dat')
       
 	
 	!初始化lattice
@@ -52,7 +53,7 @@ program main
       cont=1
 	h1=h1/(grid**2)
 	mag=mag/(grid**2)
-      write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
+!      write(k,*) "steps:",cont,"Hamiltonian:",h1,"Magnetization:",mag
       
 	!随机翻转一个格点上的磁矩，并计算磁化强度，哈密顿量，循环指定步数
       10 continue
@@ -88,7 +89,7 @@ program main
 	h2=h2/(grid**2)
 	mag=mag/(grid**2)
 !      print*,cont,"Hamiltonian:",h2,"magnetization:",mag
-      write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,"Mag**4:",mag**4,"Mag**2:",mag**2
+!      write(k,*) "steps:",cont,"Hamiltonian:",h2,"Magnetization:",mag,"Mag**4:",mag**4,"Mag**2:",mag**2
 	if (cont .gt. steps/2) then
 		m4=m4+mag**4
 		m2=m2+mag**2
@@ -107,11 +108,11 @@ program main
 	e=e/(steps/2)
 	m=m/(steps/2)
 	
-	write(k,*) "Temperature:",t,"Hamiltonian:",e,"Magnetization:",m,"4th_order_cumulant:",u
+	write(1,*) "Temperature:",t,"Hamiltonian:",e,"Magnetization:",m,"4th_order_cumulant:",u
 
 
       
-      close(k)
+      close(unit=1)
 
 
 	!决定删除这些，把做平均的步骤放到了之前       
