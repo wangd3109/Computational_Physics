@@ -12,14 +12,15 @@ set view 0,0
 #set ytics -50,10,50
 set xlabel font ",24"
 set xlabel "Temperature"
-#set xrange [5:    50]
+set xrange [0:    5]
 set ylabel font ",24"
 set ylabel "Energy"
-#set yrange [ -10:   10]
+set yrange [ -2.2:   -0.2]
 #set arrow 1 from -10 to 10 nohead
 #set title "band"
 plot \
-'./1m_steps/data.dat' u 2:4 w p lt 8 lw 3 lc 0 t "1 million" ,\
-'./0.1m_steps/data.dat' u 2:4 w p lt 8 lw 3 lc 1 t "0.1 million" ,\
-'./10000steps/data.dat' u 2:4 w p lt 8 lw 3 lc 2 t "0.01 million" ,\
+'./100/data.dat' u 2:4 w p lt 8 lw 3 lc 0 t "100" ,\
+'./500/data.dat' u 2:4 w p lt 8 lw 3 lc 1 t "500" ,\
+'./1000/data.dat' u 2:4 w p lt 8 lw 3 lc 2 t "1000" ,\
+'./2000/data.dat' u 2:4 w p lt 8 lw 3 lc 3 t "2000" ,\
 

@@ -15,7 +15,7 @@ set xlabel "Temperature"
 set xrange [0:    5]
 set ylabel font ",24"
 set ylabel "Energy"
-#set yrange [ -10:   10]
+set yrange [ -2.2:   -0.2]
 #set arrow 1 from -10 to 10 nohead
 #set title "band"
 plot \
