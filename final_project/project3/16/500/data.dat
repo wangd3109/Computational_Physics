@@ -1,196 +1,194 @@
- Temperature:  0.25000000000000000      Hamiltonian:  -2.0000000000000000      Magnetization:   1.0000000000000000      4th_order_cumulant:  0.66666666666666674     
- Temperature:  0.30000001192092896      Hamiltonian:  -2.0000312500000001      Magnetization:   1.0000156250000001      4th_order_cumulant:  0.83333333333333337     
- Temperature:  0.34999999403953552      Hamiltonian:  -2.0000312504882811      Magnetization:   1.0000156252441406      4th_order_cumulant:  0.88888888888888884     
- Temperature:  0.40000000596046448      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.91666666666666663     
- Temperature:  0.45000001788139343      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.93333333333333335     
- Temperature:  0.50000000000000000      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.94444444444444442     
- Temperature:  0.55000001192092896      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.95238095238095233     
- Temperature:  0.60000002384185791      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.95833333333333337     
- Temperature:  0.65000003576278687      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.96296296296296302     
- Temperature:  0.69999998807907104      Hamiltonian:  -1.7317595219726638      Magnetization: -0.20714636206054304      4th_order_cumulant:  0.96333665852520123     
- Temperature:  0.75000000000000000      Hamiltonian:  -2.0000270587425306      Magnetization:  0.99999676333809284      4th_order_cumulant:  0.96696959451319331     
- Temperature:  0.80000001192092896      Hamiltonian:  -1.9997617191727928      Magnetization:  0.99994824213692712      4th_order_cumulant:  0.96994747925143632     
- Temperature:  0.85000002384185791      Hamiltonian:  -1.9997617150268621      Magnetization:  0.99994824137878346      4th_order_cumulant:  0.97243282836477074     
- Temperature:  0.90000003576278687      Hamiltonian:  -1.9989179650267972      Magnetization:  0.99973730387877147      4th_order_cumulant:  0.97453849629456024     
- Temperature:  0.94999998807907104      Hamiltonian:  -1.9976862623900786      Magnetization:  0.99942748612974808      4th_order_cumulant:  0.97634530843234602     
- Temperature:   1.0000000000000000      Hamiltonian:  -1.9974040165822249      Magnetization:  0.99935460531228326      4th_order_cumulant:  0.97791267860146402     
- Temperature:   1.0500000715255737      Hamiltonian:  -1.9954211020158841      Magnetization:  0.99879894011102055      4th_order_cumulant:  0.97928521985963113     
- Temperature:   1.1000000238418579      Hamiltonian:  -1.9930172624390938      Magnetization:  0.99817759353812674      4th_order_cumulant:  0.98049713360455726     
- Temperature:   1.1499999761581421      Hamiltonian:  -1.9887628303478504      Magnetization:  0.99710373129052399      4th_order_cumulant:  0.98157501747778952     
- Temperature:   1.2000000476837158      Hamiltonian:  -1.7284263380910994      Magnetization:  0.33875349478486388      4th_order_cumulant:  0.98194584138686636     
- Temperature:   1.2500000000000000      Hamiltonian:  -1.9818663621302826      Magnetization:  0.99520097173429345      4th_order_cumulant:  0.98287328328619494     
- Temperature:   1.3000000715255737      Hamiltonian:  -1.9755299900994083      Magnetization: -0.99352876150825409      4th_order_cumulant:  0.98371003904673404     
- Temperature:   1.3500000238418579      Hamiltonian:  -1.9734031821092204      Magnetization:  0.99290061380841399      4th_order_cumulant:  0.98446877750590112     
- Temperature:   1.3999999761581421      Hamiltonian:  -1.9654102289559705      Magnetization:  0.99080274551740333      4th_order_cumulant:  0.98515990032988943     
- Temperature:   1.4500000476837158      Hamiltonian:  -1.9597999966442026      Magnetization:  0.98917441683977370      4th_order_cumulant:  0.98579200923115096     
- Temperature:   1.5000000000000000      Hamiltonian:  -1.9516678289061975      Magnetization:  0.98686457694401319      4th_order_cumulant:  0.98637235767693177     
- Temperature:   1.5500000715255737      Hamiltonian:  -1.9417153092629518      Magnetization:  0.98382730940745222      4th_order_cumulant:  0.98690693921495176     
- Temperature:   1.6000000238418579      Hamiltonian:  -1.9247849779735822      Magnetization:  0.97915367796577202      4th_order_cumulant:  0.98740092455897766     
- Temperature:   1.6499999761581421      Hamiltonian:  -1.9176130825777808      Magnetization:  0.97688981099496819      4th_order_cumulant:  0.98785878343130551     
- Temperature:   1.7000000476837158      Hamiltonian:  -1.9083929998137903      Magnetization:  0.97382739769235926      4th_order_cumulant:  0.98828425016142951     
- Temperature:   1.7500000000000000      Hamiltonian:  -1.8728049651249972      Magnetization:  0.96024251097496394      4th_order_cumulant:  0.98867939426559648     
- Temperature:   1.8000000715255737      Hamiltonian:  -1.8234508934369551      Magnetization: -0.93594129503889101      4th_order_cumulant:  0.98904267223759845     
- Temperature:   1.8500000238418579      Hamiltonian:  -1.8401820558733351      Magnetization:  0.95022170404226491      4th_order_cumulant:  0.98938830425978663     
- Temperature:   1.8999999761581421      Hamiltonian:  -1.8110912528446228      Magnetization: -0.93829557759056181      4th_order_cumulant:  0.98971105334534282     
- Temperature:   1.9500000476837158      Hamiltonian:  -1.7771406029883257      Magnetization:  0.92446556374097510      4th_order_cumulant:  0.99001220566131354     
- Temperature:   2.0000000000000000      Hamiltonian:  -1.7473439299312967      Magnetization:  0.91471268696193353      4th_order_cumulant:  0.99029545574621836     
- Temperature:   2.0499999523162842      Hamiltonian:  -1.6937934155301553      Magnetization:  0.87526465859667135      4th_order_cumulant:  0.99055334473002254     
- Temperature:   2.1000001430511475      Hamiltonian:  -1.6638692389596177      Magnetization:  0.87950952561966556      4th_order_cumulant:  0.99080085341482826     
- Temperature:   2.1500000953674316      Hamiltonian:  -1.6354034393631087      Magnetization:  0.86346882046133788      4th_order_cumulant:  0.99103331253635052     
- Temperature:   2.2000000476837158      Hamiltonian:  -1.5699676918506149      Magnetization:  0.82078912646594471      4th_order_cumulant:  0.99124435949923451     
- Temperature:   2.2500000000000000      Hamiltonian:  -1.4720535834795601      Magnetization:  0.69772986584572605      4th_order_cumulant:  0.99140826886015909     
- Temperature:   2.2999999523162842      Hamiltonian:  -1.4086726590403669      Magnetization: -0.69812569465053365      4th_order_cumulant:  0.99157105195636153     
- Temperature:   2.3500001430511475      Hamiltonian:  -1.3096274792602975      Magnetization: -0.56764018067491651      4th_order_cumulant:  0.99169022800063089     
- Temperature:   2.4000000953674316      Hamiltonian:  -1.1783817910543635      Magnetization:  0.24291349390342698      4th_order_cumulant:  0.99174817298023432     
- Temperature:   2.4500000476837158      Hamiltonian:  -1.1864275919029852      Magnetization:  0.27684754552334223      4th_order_cumulant:  0.99182782003923209     
- Temperature:   2.5000000000000000      Hamiltonian:  -1.2457477859779986      Magnetization:  0.57777812945383633      4th_order_cumulant:  0.99194624966625966     
- Temperature:   2.5499999523162842      Hamiltonian:  -1.0898695624654060      Magnetization:  0.19805236274421020      4th_order_cumulant:  0.99200385498770882     
- Temperature:   2.6000001430511475      Hamiltonian:  -1.0122418827275386      Magnetization: -0.16968025504120712      4th_order_cumulant:  0.99202997229024836     
- Temperature:   2.6500000953674316      Hamiltonian: -0.99406147057629257      Magnetization:   7.4758457144452478E-002 4th_order_cumulant:  0.99206237728806412     
- Temperature:   2.7000000476837158      Hamiltonian: -0.98425552244485282      Magnetization: -0.15540068736785714      4th_order_cumulant:  0.99209088398470957     
- Temperature:   2.7500000000000000      Hamiltonian: -0.93039672664878825      Magnetization:  0.17508888045800985      4th_order_cumulant:  0.99212002291060364     
- Temperature:   2.7999999523162842      Hamiltonian: -0.88628602182385385      Magnetization: -0.13467414411905534      4th_order_cumulant:  0.99214153778781899     
- Temperature:   2.8500001430511475      Hamiltonian: -0.89315569392221594      Magnetization: -0.15154470682256435      4th_order_cumulant:  0.99216997996054190     
- Temperature:   2.9000000953674316      Hamiltonian: -0.85840165087021747      Magnetization:   3.0145459262393402E-002 4th_order_cumulant:  0.99218218926795432     
- Temperature:   2.9500000476837158      Hamiltonian: -0.80875242619766985      Magnetization:   4.7441755202488473E-002 4th_order_cumulant:  0.99219225445191317     
- Temperature:   3.0000000000000000      Hamiltonian: -0.81287030277228423      Magnetization:  0.14987256744930005      4th_order_cumulant:  0.99221392569806632     
- Temperature:   3.0499999523162842      Hamiltonian: -0.80476758391098091      Magnetization:   7.5613669883866391E-002 4th_order_cumulant:  0.99222855795122689     
- Temperature:   3.1000001430511475      Hamiltonian: -0.77121399050912365      Magnetization:  -1.7803126770330664E-003 4th_order_cumulant:  0.99224291771237894     
- Temperature:   3.1500000953674316      Hamiltonian: -0.75353206974985165      Magnetization:  -1.1679965673855861E-003 4th_order_cumulant:  0.99225936664868086     
- Temperature:   3.2000000476837158      Hamiltonian: -0.73893633448546481      Magnetization:   4.1701641906303634E-002 4th_order_cumulant:  0.99226786135412182     
- Temperature:   3.2500000000000000      Hamiltonian: -0.73765778611460131      Magnetization:   5.2779826392842281E-002 4th_order_cumulant:  0.99228034507871887     
- Temperature:   3.2999999523162842      Hamiltonian: -0.70491899660603308      Magnetization:   4.1490692848849889E-002 4th_order_cumulant:  0.99228885975456071     
- Temperature:   3.3500001430511475      Hamiltonian: -0.69183743037494694      Magnetization:   3.3989295753013266E-002 4th_order_cumulant:  0.99230093809157704     
- Temperature:   3.4000000953674316      Hamiltonian: -0.67124689394422465      Magnetization:   2.5695843582746142E-002 4th_order_cumulant:  0.99231057100908415     
- Temperature:   3.4500000476837158      Hamiltonian: -0.67563646479521788      Magnetization:   4.7286412239743482E-002 4th_order_cumulant:  0.99232167721275744     
- Temperature:   3.5000000000000000      Hamiltonian: -0.64609698260101245      Magnetization:   3.6120123615816249E-002 4th_order_cumulant:  0.99233007110585125     
- Temperature:   3.5499999523162842      Hamiltonian: -0.62742537846847812      Magnetization:   2.7716140548806497E-002 4th_order_cumulant:  0.99233689317061402     
- Temperature:   3.6000001430511475      Hamiltonian: -0.63299661992778855      Magnetization:   2.2440374470946076E-002 4th_order_cumulant:  0.99234470231211580     
- Temperature:   3.6500000953674316      Hamiltonian: -0.61568298627531137      Magnetization:  -5.8687637650398895E-002 4th_order_cumulant:  0.99235232402609141     
- Temperature:   3.7000000476837158      Hamiltonian: -0.61403549895291054      Magnetization:   2.2439634763474214E-002 4th_order_cumulant:  0.99236009327828412     
- Temperature:   3.7500000000000000      Hamiltonian: -0.59950007282029616      Magnetization:   2.8727401400543178E-002 4th_order_cumulant:  0.99236789753018606     
- Temperature:   3.7999999523162842      Hamiltonian: -0.59868026562613785      Magnetization:  -2.8901406603103114E-002 4th_order_cumulant:  0.99237484196991987     
- Temperature:   3.8500001430511475      Hamiltonian: -0.60097663953540037      Magnetization:  -2.4055993576665671E-002 4th_order_cumulant:  0.99238253499986084     
- Temperature:   3.9000000953674316      Hamiltonian: -0.57603356018186780      Magnetization:   1.2778554789162865E-002 4th_order_cumulant:  0.99238895160694973     
- Temperature:   3.9500000476837158      Hamiltonian: -0.57176876614937777      Magnetization:   9.2610639227310824E-003 4th_order_cumulant:  0.99239564619403597     
- Temperature:   4.0000000000000000      Hamiltonian: -0.55703823076197112      Magnetization:   1.3185040791237927E-003 4th_order_cumulant:  0.99240039256720247     
- Temperature:   4.0500001907348633      Hamiltonian: -0.53855264903485567      Magnetization:   1.7927266695376236E-002 4th_order_cumulant:  0.99240606555701794     
- Temperature:   4.0999999046325684      Hamiltonian: -0.54972667660389118      Magnetization:  -7.4056036755203855E-003 4th_order_cumulant:  0.99241134789268381     
- Temperature:   4.1500000953674316      Hamiltonian: -0.55570780822932198      Magnetization:   1.6692022959317571E-002 4th_order_cumulant:  0.99241606382281133     
- Temperature:   4.2000002861022949      Hamiltonian: -0.52722499152825353      Magnetization:  -2.1652665308912605E-003 4th_order_cumulant:  0.99242025674480217     
- Temperature:   4.2500000000000000      Hamiltonian: -0.51787859921861767      Magnetization:  -1.0022860980727046E-002 4th_order_cumulant:  0.99242488549866681     
- Temperature:   4.3000001907348633      Hamiltonian: -0.50719852154061273      Magnetization:  -8.3562357087653243E-003 4th_order_cumulant:  0.99242906626843064     
- Temperature:   4.3499999046325684      Hamiltonian: -0.51560143083627408      Magnetization:   2.4984488574442049E-002 4th_order_cumulant:  0.99243329761707244     
- Temperature:   4.4000000953674316      Hamiltonian: -0.49002123986610685      Magnetization:   1.7123803468571473E-002 4th_order_cumulant:  0.99243798096655578     
- Temperature:   4.4500002861022949      Hamiltonian: -0.49367293978499788      Magnetization:   1.0610374981304196E-002 4th_order_cumulant:  0.99244294069342121     
- Temperature:   4.5000000000000000      Hamiltonian: -0.47363979371780912      Magnetization:  -2.5309621425784173E-003 4th_order_cumulant:  0.99244777480085156     
- Temperature:   4.5500001907348633      Hamiltonian: -0.48240266429365181      Magnetization:  -1.1448149369084782E-003 4th_order_cumulant:  0.99245246965523592     
- Temperature:   4.5999999046325684      Hamiltonian: -0.47130416840100459      Magnetization:   1.4312604182579111E-002 4th_order_cumulant:  0.99245647091977840     
- Temperature:   4.6500000953674316      Hamiltonian: -0.46278641686200628      Magnetization:  -1.2733052732747148E-002 4th_order_cumulant:  0.99246080665026759     
- Temperature:   4.7000002861022949      Hamiltonian: -0.46428921345963847      Magnetization:   3.4972375694885508E-003 4th_order_cumulant:  0.99246569066827173     
- Temperature:   4.7500000000000000      Hamiltonian: -0.45974382678458531      Magnetization:   3.8074276912120233E-003 4th_order_cumulant:  0.99247011220701309     
- Temperature:   4.8000001907348633      Hamiltonian: -0.44767857021604351      Magnetization:   5.0853866394951746E-003 4th_order_cumulant:  0.99247394746842688     
- Temperature:   4.8499999046325684      Hamiltonian: -0.44352042271203462      Magnetization:   1.7670733756041244E-002 4th_order_cumulant:  0.99247824577897636     
- Temperature:   4.9000000953674316      Hamiltonian: -0.45243271125660489      Magnetization:   1.2144197003652438E-002 4th_order_cumulant:  0.99248267816972802     
- Temperature:   4.9500002861022949      Hamiltonian: -0.43375658097986336      Magnetization:  -2.4547417668796818E-002 4th_order_cumulant:  0.99248607567961489     
- Temperature:   5.0000000000000000      Hamiltonian: -0.43617254893095281      Magnetization:  -4.6695730065260755E-003 4th_order_cumulant:  0.99249054352632937     
- Temperature:   5.0500001907348633      Hamiltonian: -0.42580320191482701      Magnetization:   4.7661160823427284E-004 4th_order_cumulant:  0.99249458666326373     
- Temperature:   5.0999999046325684      Hamiltonian: -0.41433404575315491      Magnetization:   2.2255866822056380E-002 4th_order_cumulant:  0.99249795664161111     
- Temperature:   5.1500000953674316      Hamiltonian: -0.42402136654758987      Magnetization:  -1.8266742095830908E-002 4th_order_cumulant:  0.99250187844805982     
- Temperature:   5.2000002861022949      Hamiltonian: -0.40899905697447730      Magnetization:  -3.7447922537827481E-003 4th_order_cumulant:  0.99250540987747882     
- Temperature:   5.2500000000000000      Hamiltonian: -0.40461869529776523      Magnetization:  -6.5664647623789648E-003 4th_order_cumulant:  0.99250937696111818     
- Temperature:   5.3000001907348633      Hamiltonian: -0.40384982802648905      Magnetization:  -2.3981738900744121E-003 4th_order_cumulant:  0.99251328356772783     
- Temperature:   5.3499999046325684      Hamiltonian: -0.38998043124731291      Magnetization:  -3.7102425495920324E-003 4th_order_cumulant:  0.99251725144492808     
- Temperature:   5.4000000953674316      Hamiltonian: -0.38840013641298821      Magnetization:   2.6419098008976629E-003 4th_order_cumulant:  0.99252032336409757     
- Temperature:   5.4500002861022949      Hamiltonian: -0.38565548281463147      Magnetization:  -4.7575270795343610E-003 4th_order_cumulant:  0.99252375085937861     
- Temperature:   5.5000000000000000      Hamiltonian: -0.38807755907004399      Magnetization:   1.8229237105143827E-003 4th_order_cumulant:  0.99252746827603611     
- Temperature:   5.5500001907348633      Hamiltonian: -0.36947969652436047      Magnetization:  -1.2640352376192023E-002 4th_order_cumulant:  0.99253033314842276     
- Temperature:   5.5999999046325684      Hamiltonian: -0.37336465983900818      Magnetization:   1.4852341556994123E-002 4th_order_cumulant:  0.99253351376894594     
- Temperature:   5.6500000953674316      Hamiltonian: -0.37179416390093500      Magnetization:   2.3353747692836827E-002 4th_order_cumulant:  0.99253706410876130     
- Temperature:   5.7000002861022949      Hamiltonian: -0.37711127803381095      Magnetization:   2.4152220371057700E-002 4th_order_cumulant:  0.99254065910828715     
- Temperature:   5.7500000000000000      Hamiltonian: -0.35833328494184430      Magnetization:   1.0179210386255797E-002 4th_order_cumulant:  0.99254388916963177     
- Temperature:   5.8000001907348633      Hamiltonian: -0.36454099934820222      Magnetization:   4.8236453782872848E-003 4th_order_cumulant:  0.99254737218738887     
- Temperature:   5.8499999046325684      Hamiltonian: -0.35116048110936482      Magnetization:   1.1983175569590366E-003 4th_order_cumulant:  0.99255101151292668     
- Temperature:   5.9000000953674316      Hamiltonian: -0.35709606305439234      Magnetization:  -3.6225398700381727E-003 4th_order_cumulant:  0.99255397431738102     
- Temperature:   5.9500002861022949      Hamiltonian: -0.34616500345411022      Magnetization:   1.2501530311877030E-002 4th_order_cumulant:  0.99255661881243318     
- Temperature:   6.0000000000000000      Hamiltonian: -0.35584232289067896      Magnetization:   8.2246826410986226E-003 4th_order_cumulant:  0.99255962746994386     
- Temperature:   6.0500001907348633      Hamiltonian: -0.34711347019254513      Magnetization:  -1.0034783598708736E-002 4th_order_cumulant:  0.99256304565480713     
- Temperature:   6.0999999046325684      Hamiltonian: -0.34302226935109670      Magnetization:  -1.2720615777868731E-002 4th_order_cumulant:  0.99256649182948598     
- Temperature:   6.1500000953674316      Hamiltonian: -0.33301829917608361      Magnetization:  -1.6360630174340294E-003 4th_order_cumulant:  0.99256947364731729     
- Temperature:   6.2000002861022949      Hamiltonian: -0.34020173661404968      Magnetization:  -1.1619166188484648E-002 4th_order_cumulant:  0.99257274174561716     
- Temperature:   6.2500000000000000      Hamiltonian: -0.33290839182400961      Magnetization:   8.2581192317783061E-003 4th_order_cumulant:  0.99257573658141807     
- Temperature:   6.3000001907348633      Hamiltonian: -0.33798786770924727      Magnetization:   1.3078620244050496E-002 4th_order_cumulant:  0.99257892608103471     
- Temperature:   6.3499999046325684      Hamiltonian: -0.33581509551355793      Magnetization:  -7.8190095137461862E-003 4th_order_cumulant:  0.99258196723916869     
- Temperature:   6.4000000953674316      Hamiltonian: -0.32314440726711741      Magnetization:   2.1037596639138486E-003 4th_order_cumulant:  0.99258476598497225     
- Temperature:   6.4500002861022949      Hamiltonian: -0.32540690460011351      Magnetization:  -8.3971839256302520E-003 4th_order_cumulant:  0.99258804902248909     
- Temperature:   6.5000000000000000      Hamiltonian: -0.31473262354538439      Magnetization:  -2.2419524950613372E-003 4th_order_cumulant:  0.99259063306985196     
- Temperature:   6.5500001907348633      Hamiltonian: -0.31282815988474288      Magnetization:  -2.8714949914452354E-003 4th_order_cumulant:  0.99259328089813548     
- Temperature:   6.5999999046325684      Hamiltonian: -0.32337109887749821      Magnetization:  -1.1336226507734241E-002 4th_order_cumulant:  0.99259607127558624     
- Temperature:   6.6500000953674316      Hamiltonian: -0.31190300189216996      Magnetization:  -3.5164124801016837E-003 4th_order_cumulant:  0.99259904455490389     
- Temperature:   6.7000002861022949      Hamiltonian: -0.31021312543752960      Magnetization:  -2.8115783814450018E-003 4th_order_cumulant:  0.99260224215223825     
- Temperature:   6.7500000000000000      Hamiltonian: -0.30251778653320999      Magnetization:  -9.5231152199747090E-003 4th_order_cumulant:  0.99260510202068397     
- Temperature:   6.8000001907348633      Hamiltonian: -0.31185409207478959      Magnetization:  -1.0068874384612812E-002 4th_order_cumulant:  0.99260794771024818     
- Temperature:   6.8499999046325684      Hamiltonian: -0.29969286100143872      Magnetization:  -1.0466832130849760E-002 4th_order_cumulant:  0.99261056045607809     
- Temperature:   6.9000000953674316      Hamiltonian: -0.30157255379470316      Magnetization:   9.8426098932479552E-003 4th_order_cumulant:  0.99261312185379902     
- Temperature:   6.9500002861022949      Hamiltonian: -0.29929182144615307      Magnetization:  -4.4711183422041858E-004 4th_order_cumulant:  0.99261584151493731     
- Temperature:   7.0000000000000000      Hamiltonian: -0.30378079948158504      Magnetization:   5.8586355920025902E-003 4th_order_cumulant:  0.99261875767421504     
- Temperature:   7.0500001907348633      Hamiltonian: -0.29308140673124189      Magnetization:   6.8880309943061251E-003 4th_order_cumulant:  0.99262149817042289     
- Temperature:   7.0999999046325684      Hamiltonian: -0.29483978447510517      Magnetization:  -8.1678690576571353E-004 4th_order_cumulant:  0.99262440193022339     
- Temperature:   7.1500000953674316      Hamiltonian: -0.28813717523100740      Magnetization:  -5.3651178573290272E-004 4th_order_cumulant:  0.99262733487783328     
- Temperature:   7.2000002861022949      Hamiltonian: -0.29324473651836297      Magnetization:   4.5057289216908474E-003 4th_order_cumulant:  0.99262986875389836     
- Temperature:   7.2500000000000000      Hamiltonian: -0.28026581241775805      Magnetization:  -2.7231961995480987E-003 4th_order_cumulant:  0.99263223952116886     
- Temperature:   7.3000001907348633      Hamiltonian: -0.28004563891894407      Magnetization:   2.2529924693438197E-004 4th_order_cumulant:  0.99263508521769783     
- Temperature:   7.3499999046325684      Hamiltonian: -0.28632224680685814      Magnetization:  -1.3535885151574266E-002 4th_order_cumulant:  0.99263790062286206     
- Temperature:   7.4000000953674316      Hamiltonian: -0.27781282339448138      Magnetization:   1.2965486743982006E-002 4th_order_cumulant:  0.99264069296163659     
- Temperature:   7.4500002861022949      Hamiltonian: -0.27583979004411552      Magnetization:  -7.5773120627071261E-003 4th_order_cumulant:  0.99264327265708585     
- Temperature:   7.5000000000000000      Hamiltonian: -0.27626651702796945      Magnetization:  -1.7394405504875980E-002 4th_order_cumulant:  0.99264588006106425     
- Temperature:   7.5500001907348633      Hamiltonian: -0.27004875025807862      Magnetization:   7.4284391499139860E-003 4th_order_cumulant:  0.99264832462781127     
- Temperature:   7.5999999046325684      Hamiltonian: -0.28023175857422278      Magnetization:  -1.1673643993882826E-003 4th_order_cumulant:  0.99265076692310361     
- Temperature:   7.6500000953674316      Hamiltonian: -0.26754319698060269      Magnetization:   2.7746399630562591E-003 4th_order_cumulant:  0.99265324058571880     
- Temperature:   7.7000002861022949      Hamiltonian: -0.26786306708120283      Magnetization:   1.8214544865619224E-003 4th_order_cumulant:  0.99265541815575264     
- Temperature:   7.7500000000000000      Hamiltonian: -0.27516141192292315      Magnetization:   1.0132108538351354E-002 4th_order_cumulant:  0.99265851430912477     
- Temperature:   7.8000001907348633      Hamiltonian: -0.26159145760018626      Magnetization:  -4.6155643420540881E-003 4th_order_cumulant:  0.99266107815800264     
- Temperature:   7.8499999046325684      Hamiltonian: -0.25598455611652499      Magnetization:  -4.6972156728803454E-003 4th_order_cumulant:  0.99266379946163130     
- Temperature:   7.9000000953674316      Hamiltonian: -0.26874643139931431      Magnetization:   1.0722641069261130E-004 4th_order_cumulant:  0.99266660237960158     
- Temperature:   7.9500002861022949      Hamiltonian: -0.26138945306924061      Magnetization:  -2.3469221527123328E-003 4th_order_cumulant:  0.99266950996315251     
- Temperature:   8.0000000000000000      Hamiltonian: -0.25237078342895419      Magnetization:  -1.2499146003461358E-003 4th_order_cumulant:  0.99267237417102383     
- Temperature:   8.0500001907348633      Hamiltonian: -0.26264285930911607      Magnetization:   1.2812304700843696E-003 4th_order_cumulant:  0.99267504179643695     
- Temperature:   8.1000003814697266      Hamiltonian: -0.24219721902905172      Magnetization:  -1.0692851074523904E-002 4th_order_cumulant:  0.99267729668915683     
- Temperature:   8.1500005722045898      Hamiltonian: -0.24366711440967234      Magnetization:  -2.2428428570480394E-003 4th_order_cumulant:  0.99267942713475510     
- Temperature:   8.1999998092651367      Hamiltonian: -0.24478920768928766      Magnetization:   9.6800186665178586E-003 4th_order_cumulant:  0.99268164123047486     
- Temperature:   8.2500000000000000      Hamiltonian: -0.25234830725324514      Magnetization:  -6.2990430856458349E-003 4th_order_cumulant:  0.99268402429798119     
- Temperature:   8.3000001907348633      Hamiltonian: -0.23870633552042583      Magnetization:   5.4934005401428680E-004 4th_order_cumulant:  0.99268602365996106     
- Temperature:   8.3500003814697266      Hamiltonian: -0.25339533134899250      Magnetization:  -1.0078604697811655E-002 4th_order_cumulant:  0.99268863086628834     
- Temperature:   8.4000005722045898      Hamiltonian: -0.24829668391142731      Magnetization:  -2.5251818922609032E-003 4th_order_cumulant:  0.99269086986648203     
- Temperature:   8.4499998092651367      Hamiltonian: -0.25107712182318614      Magnetization:  -5.0406777627956599E-004 4th_order_cumulant:  0.99269334421430100     
- Temperature:   8.5000000000000000      Hamiltonian: -0.24256788792377848      Magnetization:  -5.1258623682465037E-003 4th_order_cumulant:  0.99269601736999824     
- Temperature:   8.5500001907348633      Hamiltonian: -0.24030261824824878      Magnetization:   2.9745292834004963E-003 4th_order_cumulant:  0.99269831875036629     
- Temperature:   8.6000003814697266      Hamiltonian: -0.22837802230653512      Magnetization:   3.5991675707700531E-003 4th_order_cumulant:  0.99270055032321647     
- Temperature:   8.6500005722045898      Hamiltonian: -0.23641006254722352      Magnetization:  -1.4659001380194206E-002 4th_order_cumulant:  0.99270295775859374     
- Temperature:   8.6999998092651367      Hamiltonian: -0.24938723882910230      Magnetization:  -4.5541841250215662E-003 4th_order_cumulant:  0.99270553994643018     
- Temperature:   8.7500000000000000      Hamiltonian: -0.23258519550373172      Magnetization:   4.5485128252480463E-003 4th_order_cumulant:  0.99270789091387990     
- Temperature:   8.8000001907348633      Hamiltonian: -0.22450998179992973      Magnetization:   5.7576394298878945E-003 4th_order_cumulant:  0.99271016499472753     
- Temperature:   8.8500003814697266      Hamiltonian: -0.23507137906221562      Magnetization:   1.2350309689678592E-002 4th_order_cumulant:  0.99271260995831634     
- Temperature:   8.9000005722045898      Hamiltonian: -0.23452881947467286      Magnetization:   4.5714820360889018E-003 4th_order_cumulant:  0.99271477197003599     
- Temperature:   8.9499998092651367      Hamiltonian: -0.23627905513780428      Magnetization:  -9.3230486877806853E-003 4th_order_cumulant:  0.99271729289403010     
- Temperature:   9.0000000000000000      Hamiltonian: -0.22537185592273654      Magnetization:  -9.8690421570107462E-003 4th_order_cumulant:  0.99271951866336705     
- Temperature:   9.0500001907348633      Hamiltonian: -0.22694932221649877      Magnetization:  -8.2224442428462038E-003 4th_order_cumulant:  0.99272191061619908     
- Temperature:   9.1000003814697266      Hamiltonian: -0.21524255975503462      Magnetization:   2.2075131258712053E-003 4th_order_cumulant:  0.99272385158434917     
- Temperature:   9.1500005722045898      Hamiltonian: -0.22728974011812120      Magnetization:  -1.0699916679482408E-002 4th_order_cumulant:  0.99272585687841119     
- Temperature:   9.1999998092651367      Hamiltonian: -0.21915296546468935      Magnetization:   8.5613562513018847E-003 4th_order_cumulant:  0.99272804061461972     
- Temperature:   9.2500000000000000      Hamiltonian: -0.22364966449946039      Magnetization:  -2.9173634599607333E-004 4th_order_cumulant:  0.99272982179402824     
- Temperature:   9.3000001907348633      Hamiltonian: -0.22562849452600781      Magnetization:   9.0006057931820930E-003 4th_order_cumulant:  0.99273213653063552     
- Temperature:   9.3500003814697266      Hamiltonian: -0.22395347661710197      Magnetization:   8.5106386813405179E-003 4th_order_cumulant:  0.99273407903356636     
- Temperature:   9.4000005722045898      Hamiltonian: -0.21107771802307215      Magnetization:  -1.5089002243956040E-003 4th_order_cumulant:  0.99273631644788718     
- Temperature:   9.4499998092651367      Hamiltonian: -0.21334582738621913      Magnetization:  -5.1269767015660059E-003 4th_order_cumulant:  0.99273865005219752     
- Temperature:   9.5000000000000000      Hamiltonian: -0.21189566751292790      Magnetization:   3.5476493831765373E-003 4th_order_cumulant:  0.99274060764381800     
- Temperature:   9.5500001907348633      Hamiltonian: -0.21425331086980490      Magnetization:   2.4248707264661195E-004 4th_order_cumulant:  0.99274267215991552     
- Temperature:   9.6000003814697266      Hamiltonian: -0.21330022270798235      Magnetization:   7.4365613261051023E-004 4th_order_cumulant:  0.99274472646854961     
- Temperature:   9.6500005722045898      Hamiltonian: -0.21133487578472981      Magnetization:  -1.5340459975604279E-003 4th_order_cumulant:  0.99274714763479999     
- Temperature:   9.6999998092651367      Hamiltonian: -0.20959778452930913      Magnetization:   6.1973637258437879E-003 4th_order_cumulant:  0.99274933016926115     
- Temperature:   9.7500000000000000      Hamiltonian: -0.21318515973100827      Magnetization:   4.7800040603707163E-003 4th_order_cumulant:  0.99275176667781340     
- Temperature:   9.8000001907348633      Hamiltonian: -0.20783682711187079      Magnetization:  -3.0032212108740560E-003 4th_order_cumulant:  0.99275394264375383     
- Temperature:   9.8500003814697266      Hamiltonian: -0.20878425330979863      Magnetization:   1.1408881685608030E-004 4th_order_cumulant:  0.99275634056680484     
- Temperature:   9.9000005722045898      Hamiltonian: -0.21886385795708296      Magnetization:   3.4235857670127635E-003 4th_order_cumulant:  0.99275880216364920     
- Temperature:   9.9499998092651367      Hamiltonian: -0.20264087091965557      Magnetization:  -6.1690138892848906E-003 4th_order_cumulant:  0.99276077746456726     
- Temperature:   10.000000000000000      Hamiltonian: -0.19764159399798314      Magnetization:   2.7729748982204799E-003 4th_order_cumulant:  0.99276322788226923     
+ Temperature:  0.34999999403953552      Hamiltonian:  -2.0000312504882811      Magnetization:   1.0000156252441406      4th_order_cumulant:  0.88888888888888884      	 ABS_M: 1.00002 	 -4.88281e-10 	 0
+ Temperature:  0.40000000596046448      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.91666666666666663      	 ABS_M: 1.00002 	 -7.54952e-15 	 0
+ Temperature:  0.45000001788139343      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.93333333333333335      	 ABS_M: 1.00002 	 0 	 0
+ Temperature:  0.50000000000000000      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.94444444444444442      	 ABS_M: 1.00002 	 0 	 0
+ Temperature:  0.55000001192092896      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.95238095238095233      	 ABS_M: 1.00002 	 0 	 0
+ Temperature:  0.60000002384185791      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.95833333333333337      	 ABS_M: 1.00002 	 0 	 0
+ Temperature:  0.65000003576278687      Hamiltonian:  -2.0000312504882887      Magnetization:   1.0000156252441443      4th_order_cumulant:  0.96296296296296302      	 ABS_M: 1.00002 	 0 	 0
+ Temperature:  0.69999998807907104      Hamiltonian:  -1.7317595219726638      Magnetization: -0.20714636206054304      4th_order_cumulant:  0.96333665852520123      	 ABS_M: 0.207146 	 0.268272 	 -0.792874
+ Temperature:  0.75000000000000000      Hamiltonian:  -2.0000270587425306      Magnetization:  0.99999676333809284      4th_order_cumulant:  0.96696959451319331      	 ABS_M: 0.999997 	 -0.268268 	 0.792851
+ Temperature:  0.80000001192092896      Hamiltonian:  -1.9997617191727928      Magnetization:  0.99994824213692712      4th_order_cumulant:  0.96994747925143632      	 ABS_M: 0.999948 	 0.00026534 	 -4.9e-05
+ Temperature:  0.85000002384185791      Hamiltonian:  -1.9997617150268621      Magnetization:  0.99994824137878346      4th_order_cumulant:  0.97243282836477074      	 ABS_M: 0.999948 	 4.14593e-09 	 0
+ Temperature:  0.90000003576278687      Hamiltonian:  -1.9989179650267972      Magnetization:  0.99973730387877147      4th_order_cumulant:  0.97453849629456024      	 ABS_M: 0.999737 	 0.00084375 	 -0.000211
+ Temperature:  0.94999998807907104      Hamiltonian:  -1.9976862623900786      Magnetization:  0.99942748612974808      4th_order_cumulant:  0.97634530843234602      	 ABS_M: 0.999427 	 0.0012317 	 -0.00031
+ Temperature:   1.0000000000000000      Hamiltonian:  -1.9974040165822249      Magnetization:  0.99935460531228326      4th_order_cumulant:  0.97791267860146402      	 ABS_M: 0.999355 	 0.000282246 	 -7.2e-05
+ Temperature:   1.0500000715255737      Hamiltonian:  -1.9954211020158841      Magnetization:  0.99879894011102055      4th_order_cumulant:  0.97928521985963113      	 ABS_M: 0.998799 	 0.00198291 	 -0.000556
+ Temperature:   1.1000000238418579      Hamiltonian:  -1.9930172624390938      Magnetization:  0.99817759353812674      4th_order_cumulant:  0.98049713360455726      	 ABS_M: 0.998178 	 0.00240384 	 -0.000621
+ Temperature:   1.1499999761581421      Hamiltonian:  -1.9887628303478504      Magnetization:  0.99710373129052399      4th_order_cumulant:  0.98157501747778952      	 ABS_M: 0.997104 	 0.00425443 	 -0.001074
+ Temperature:   1.2000000476837158      Hamiltonian:  -1.7284263380910994      Magnetization:  0.33875349478486388      4th_order_cumulant:  0.98194584138686636      	 ABS_M: 0.338753 	 0.260336 	 -0.658351
+ Temperature:   1.2500000000000000      Hamiltonian:  -1.9818663621302826      Magnetization:  0.99520097173429345      4th_order_cumulant:  0.98287328328619494      	 ABS_M: 0.995201 	 -0.25344 	 0.656448
+ Temperature:   1.3000000715255737      Hamiltonian:  -1.9755299900994083      Magnetization: -0.99352876150825409      4th_order_cumulant:  0.98371003904673404      	 ABS_M: 0.993529 	 0.00633637 	 -0.001672
+ Temperature:   1.3500000238418579      Hamiltonian:  -1.9734031821092204      Magnetization:  0.99290061380841399      4th_order_cumulant:  0.98446877750590112      	 ABS_M: 0.992901 	 0.00212681 	 -0.000628
+ Temperature:   1.3999999761581421      Hamiltonian:  -1.9654102289559705      Magnetization:  0.99080274551740333      4th_order_cumulant:  0.98515990032988943      	 ABS_M: 0.990803 	 0.00799295 	 -0.002098
+ Temperature:   1.4500000476837158      Hamiltonian:  -1.9597999966442026      Magnetization:  0.98917441683977370      4th_order_cumulant:  0.98579200923115096      	 ABS_M: 0.989174 	 0.00561023 	 -0.001629
+ Temperature:   1.5000000000000000      Hamiltonian:  -1.9516678289061975      Magnetization:  0.98686457694401319      4th_order_cumulant:  0.98637235767693177      	 ABS_M: 0.986865 	 0.00813217 	 -0.002309
+ Temperature:   1.5500000715255737      Hamiltonian:  -1.9417153092629518      Magnetization:  0.98382730940745222      4th_order_cumulant:  0.98690693921495176      	 ABS_M: 0.983827 	 0.00995252 	 -0.003038
+ Temperature:   1.6000000238418579      Hamiltonian:  -1.9247849779735822      Magnetization:  0.97915367796577202      4th_order_cumulant:  0.98740092455897766      	 ABS_M: 0.979154 	 0.0169303 	 -0.004673
+ Temperature:   1.6499999761581421      Hamiltonian:  -1.9176130825777808      Magnetization:  0.97688981099496819      4th_order_cumulant:  0.98785878343130551      	 ABS_M: 0.97689 	 0.0071719 	 -0.002264
+ Temperature:   1.7000000476837158      Hamiltonian:  -1.9083929998137903      Magnetization:  0.97382739769235926      4th_order_cumulant:  0.98828425016142951      	 ABS_M: 0.973827 	 0.00922008 	 -0.003063
+ Temperature:   1.7500000000000000      Hamiltonian:  -1.8728049651249972      Magnetization:  0.96024251097496394      4th_order_cumulant:  0.98867939426559648      	 ABS_M: 0.960243 	 0.035588 	 -0.013584
+ Temperature:   1.8000000715255737      Hamiltonian:  -1.8234508934369551      Magnetization: -0.93594129503889101      4th_order_cumulant:  0.98904267223759845      	 ABS_M: 0.935941 	 0.0493541 	 -0.024302
+ Temperature:   1.8500000238418579      Hamiltonian:  -1.8401820558733351      Magnetization:  0.95022170404226491      4th_order_cumulant:  0.98938830425978663      	 ABS_M: 0.950222 	 -0.0167312 	 0.014281
+ Temperature:   1.8999999761581421      Hamiltonian:  -1.8110912528446228      Magnetization: -0.93829557759056181      4th_order_cumulant:  0.98971105334534282      	 ABS_M: 0.938296 	 0.0290908 	 -0.011926
+ Temperature:   1.9500000476837158      Hamiltonian:  -1.7771406029883257      Magnetization:  0.92446556374097510      4th_order_cumulant:  0.99001220566131354      	 ABS_M: 0.924466 	 0.0339506 	 -0.01383
+ Temperature:   2.0000000000000000      Hamiltonian:  -1.7473439299312967      Magnetization:  0.91471268696193353      4th_order_cumulant:  0.99029545574621836      	 ABS_M: 0.914713 	 0.0297967 	 -0.009753
+ Temperature:   2.0499999523162842      Hamiltonian:  -1.6937934155301553      Magnetization:  0.87526465859667135      4th_order_cumulant:  0.99055334473002254      	 ABS_M: 0.875265 	 0.0535505 	 -0.039448
+ Temperature:   2.1000001430511475      Hamiltonian:  -1.6638692389596177      Magnetization:  0.87950952561966556      4th_order_cumulant:  0.99080085341482826      	 ABS_M: 0.87951 	 0.0299242 	 0.004245
+ Temperature:   2.1500000953674316      Hamiltonian:  -1.6354034393631087      Magnetization:  0.86346882046133788      4th_order_cumulant:  0.99103331253635052      	 ABS_M: 0.863469 	 0.0284658 	 -0.016041
+ Temperature:   2.2000000476837158      Hamiltonian:  -1.5699676918506149      Magnetization:  0.82078912646594471      4th_order_cumulant:  0.99124435949923451      	 ABS_M: 0.820789 	 0.0654357 	 -0.04268
+ Temperature:   2.2500000000000000      Hamiltonian:  -1.4720535834795601      Magnetization:  0.69772986584572605      4th_order_cumulant:  0.99140826886015909      	 ABS_M: 0.69773 	 0.0979141 	 -0.123059
+ Temperature:   2.2999999523162842      Hamiltonian:  -1.4086726590403669      Magnetization: -0.69812569465053365      4th_order_cumulant:  0.99157105195636153      	 ABS_M: 0.698126 	 0.0633809 	 0.000396
+ Temperature:   2.3500001430511475      Hamiltonian:  -1.3096274792602975      Magnetization: -0.56764018067491651      4th_order_cumulant:  0.99169022800063089      	 ABS_M: 0.56764 	 0.0990452 	 -0.130486
+ Temperature:   2.4000000953674316      Hamiltonian:  -1.1783817910543635      Magnetization:  0.24291349390342698      4th_order_cumulant:  0.99174817298023432      	 ABS_M: 0.242913 	 0.131246 	 -0.324727
+ Temperature:   2.4500000476837158      Hamiltonian:  -1.1864275919029852      Magnetization:  0.27684754552334223      4th_order_cumulant:  0.99182782003923209      	 ABS_M: 0.276848 	 -0.0080458 	 0.033935
+ Temperature:   2.5000000000000000      Hamiltonian:  -1.2457477859779986      Magnetization:  0.57777812945383633      4th_order_cumulant:  0.99194624966625966      	 ABS_M: 0.577778 	 -0.0593202 	 0.30093
+ Temperature:   2.5499999523162842      Hamiltonian:  -1.0898695624654060      Magnetization:  0.19805236274421020      4th_order_cumulant:  0.99200385498770882      	 ABS_M: 0.198052 	 0.155878 	 -0.379726
+ Temperature:   2.6000001430511475      Hamiltonian:  -1.0122418827275386      Magnetization: -0.16968025504120712      4th_order_cumulant:  0.99202997229024836      	 ABS_M: 0.16968 	 0.0776277 	 -0.028372
+ Temperature:   2.6500000953674316      Hamiltonian: -0.99406147057629257      Magnetization:   7.4758457144452478E-002 4th_order_cumulant:  0.99206237728806412      	 ABS_M: 0.0747585 	 0.0181804 	 -0.0949215
+ Temperature:   2.7000000476837158      Hamiltonian: -0.98425552244485282      Magnetization: -0.15540068736785714      4th_order_cumulant:  0.99209088398470957      	 ABS_M: 0.155401 	 0.00980595 	 0.0806425
+ Temperature:   2.7500000000000000      Hamiltonian: -0.93039672664878825      Magnetization:  0.17508888045800985      4th_order_cumulant:  0.99212002291060364      	 ABS_M: 0.175089 	 0.0538588 	 0.019688
+ Temperature:   2.7999999523162842      Hamiltonian: -0.88628602182385385      Magnetization: -0.13467414411905534      4th_order_cumulant:  0.99214153778781899      	 ABS_M: 0.134674 	 0.0441107 	 -0.040415
+ Temperature:   2.8500001430511475      Hamiltonian: -0.89315569392221594      Magnetization: -0.15154470682256435      4th_order_cumulant:  0.99216997996054190      	 ABS_M: 0.151545 	 -0.00686967 	 0.016871
+ Temperature:   2.9000000953674316      Hamiltonian: -0.85840165087021747      Magnetization:   3.0145459262393402E-002 4th_order_cumulant:  0.99218218926795432      	 ABS_M: 0.0301455 	 0.034754 	 -0.1214
+ Temperature:   2.9500000476837158      Hamiltonian: -0.80875242619766985      Magnetization:   4.7441755202488473E-002 4th_order_cumulant:  0.99219225445191317      	 ABS_M: 0.0474418 	 0.0496492 	 0.0172963
+ Temperature:   3.0000000000000000      Hamiltonian: -0.81287030277228423      Magnetization:  0.14987256744930005      4th_order_cumulant:  0.99221392569806632      	 ABS_M: 0.149873 	 -0.00411788 	 0.102431
+ Temperature:   3.0499999523162842      Hamiltonian: -0.80476758391098091      Magnetization:   7.5613669883866391E-002 4th_order_cumulant:  0.99222855795122689      	 ABS_M: 0.0756137 	 0.00810272 	 -0.0742593
+ Temperature:   3.1000001430511475      Hamiltonian: -0.77121399050912365      Magnetization:  -1.7803126770330664E-003 4th_order_cumulant:  0.99224291771237894      	 ABS_M: 0.00178031 	 0.0335536 	 -0.0738334
+ Temperature:   3.1500000953674316      Hamiltonian: -0.75353206974985165      Magnetization:  -1.1679965673855861E-003 4th_order_cumulant:  0.99225936664868086      	 ABS_M: 0.001168 	 0.0176819 	 -0.00061231
+ Temperature:   3.2000000476837158      Hamiltonian: -0.73893633448546481      Magnetization:   4.1701641906303634E-002 4th_order_cumulant:  0.99226786135412182      	 ABS_M: 0.0417016 	 0.0145957 	 0.0405336
+ Temperature:   3.2500000000000000      Hamiltonian: -0.73765778611460131      Magnetization:   5.2779826392842281E-002 4th_order_cumulant:  0.99228034507871887      	 ABS_M: 0.0527798 	 0.00127855 	 0.0110782
+ Temperature:   3.2999999523162842      Hamiltonian: -0.70491899660603308      Magnetization:   4.1490692848849889E-002 4th_order_cumulant:  0.99228885975456071      	 ABS_M: 0.0414907 	 0.0327388 	 -0.0112891
+ Temperature:   3.3500001430511475      Hamiltonian: -0.69183743037494694      Magnetization:   3.3989295753013266E-002 4th_order_cumulant:  0.99230093809157704      	 ABS_M: 0.0339893 	 0.0130816 	 -0.0075014
+ Temperature:   3.4000000953674316      Hamiltonian: -0.67124689394422465      Magnetization:   2.5695843582746142E-002 4th_order_cumulant:  0.99231057100908415      	 ABS_M: 0.0256958 	 0.0205905 	 -0.0082935
+ Temperature:   3.4500000476837158      Hamiltonian: -0.67563646479521788      Magnetization:   4.7286412239743482E-002 4th_order_cumulant:  0.99232167721275744      	 ABS_M: 0.0472864 	 -0.00438957 	 0.0215906
+ Temperature:   3.5000000000000000      Hamiltonian: -0.64609698260101245      Magnetization:   3.6120123615816249E-002 4th_order_cumulant:  0.99233007110585125      	 ABS_M: 0.0361201 	 0.0295395 	 -0.0111663
+ Temperature:   3.5499999523162842      Hamiltonian: -0.62742537846847812      Magnetization:   2.7716140548806497E-002 4th_order_cumulant:  0.99233689317061402      	 ABS_M: 0.0277161 	 0.0186716 	 -0.008404
+ Temperature:   3.6000001430511475      Hamiltonian: -0.63299661992778855      Magnetization:   2.2440374470946076E-002 4th_order_cumulant:  0.99234470231211580      	 ABS_M: 0.0224404 	 -0.00557124 	 -0.0052757
+ Temperature:   3.6500000953674316      Hamiltonian: -0.61568298627531137      Magnetization:  -5.8687637650398895E-002 4th_order_cumulant:  0.99235232402609141      	 ABS_M: 0.0586876 	 0.0173136 	 0.0362472
+ Temperature:   3.7000000476837158      Hamiltonian: -0.61403549895291054      Magnetization:   2.2439634763474214E-002 4th_order_cumulant:  0.99236009327828412      	 ABS_M: 0.0224396 	 0.00164749 	 -0.036248
+ Temperature:   3.7500000000000000      Hamiltonian: -0.59950007282029616      Magnetization:   2.8727401400543178E-002 4th_order_cumulant:  0.99236789753018606      	 ABS_M: 0.0287274 	 0.0145354 	 0.0062878
+ Temperature:   3.7999999523162842      Hamiltonian: -0.59868026562613785      Magnetization:  -2.8901406603103114E-002 4th_order_cumulant:  0.99237484196991987      	 ABS_M: 0.0289014 	 0.000819807 	 0.000174
+ Temperature:   3.8500001430511475      Hamiltonian: -0.60097663953540037      Magnetization:  -2.4055993576665671E-002 4th_order_cumulant:  0.99238253499986084      	 ABS_M: 0.024056 	 -0.00229637 	 -0.0048454
+ Temperature:   3.9000000953674316      Hamiltonian: -0.57603356018186780      Magnetization:   1.2778554789162865E-002 4th_order_cumulant:  0.99238895160694973      	 ABS_M: 0.0127786 	 0.0249431 	 -0.0112774
+ Temperature:   3.9500000476837158      Hamiltonian: -0.57176876614937777      Magnetization:   9.2610639227310824E-003 4th_order_cumulant:  0.99239564619403597      	 ABS_M: 0.00926106 	 0.00426479 	 -0.00351754
+ Temperature:   4.0000000000000000      Hamiltonian: -0.55703823076197112      Magnetization:   1.3185040791237927E-003 4th_order_cumulant:  0.99240039256720247      	 ABS_M: 0.0013185 	 0.0147305 	 -0.00794256
+ Temperature:   4.0500001907348633      Hamiltonian: -0.53855264903485567      Magnetization:   1.7927266695376236E-002 4th_order_cumulant:  0.99240606555701794      	 ABS_M: 0.0179273 	 0.0184856 	 0.0166088
+ Temperature:   4.0999999046325684      Hamiltonian: -0.54972667660389118      Magnetization:  -7.4056036755203855E-003 4th_order_cumulant:  0.99241134789268381      	 ABS_M: 0.0074056 	 -0.011174 	 -0.0105217
+ Temperature:   4.1500000953674316      Hamiltonian: -0.55570780822932198      Magnetization:   1.6692022959317571E-002 4th_order_cumulant:  0.99241606382281133      	 ABS_M: 0.016692 	 -0.00598113 	 0.0092864
+ Temperature:   4.2000002861022949      Hamiltonian: -0.52722499152825353      Magnetization:  -2.1652665308912605E-003 4th_order_cumulant:  0.99242025674480217      	 ABS_M: 0.00216527 	 0.0284828 	 -0.0145267
+ Temperature:   4.2500000000000000      Hamiltonian: -0.51787859921861767      Magnetization:  -1.0022860980727046E-002 4th_order_cumulant:  0.99242488549866681      	 ABS_M: 0.0100229 	 0.00934639 	 0.00785763
+ Temperature:   4.3000001907348633      Hamiltonian: -0.50719852154061273      Magnetization:  -8.3562357087653243E-003 4th_order_cumulant:  0.99242906626843064      	 ABS_M: 0.00835624 	 0.0106801 	 -0.00166666
+ Temperature:   4.3499999046325684      Hamiltonian: -0.51560143083627408      Magnetization:   2.4984488574442049E-002 4th_order_cumulant:  0.99243329761707244      	 ABS_M: 0.0249845 	 -0.00840291 	 0.0166283
+ Temperature:   4.4000000953674316      Hamiltonian: -0.49002123986610685      Magnetization:   1.7123803468571473E-002 4th_order_cumulant:  0.99243798096655578      	 ABS_M: 0.0171238 	 0.0255802 	 -0.0078607
+ Temperature:   4.4500002861022949      Hamiltonian: -0.49367293978499788      Magnetization:   1.0610374981304196E-002 4th_order_cumulant:  0.99244294069342121      	 ABS_M: 0.0106104 	 -0.0036517 	 -0.0065134
+ Temperature:   4.5000000000000000      Hamiltonian: -0.47363979371780912      Magnetization:  -2.5309621425784173E-003 4th_order_cumulant:  0.99244777480085156      	 ABS_M: 0.00253096 	 0.0200331 	 -0.00807944
+ Temperature:   4.5500001907348633      Hamiltonian: -0.48240266429365181      Magnetization:  -1.1448149369084782E-003 4th_order_cumulant:  0.99245246965523592      	 ABS_M: 0.00114481 	 -0.00876287 	 -0.00138615
+ Temperature:   4.5999999046325684      Hamiltonian: -0.47130416840100459      Magnetization:   1.4312604182579111E-002 4th_order_cumulant:  0.99245647091977840      	 ABS_M: 0.0143126 	 0.0110985 	 0.0131678
+ Temperature:   4.6500000953674316      Hamiltonian: -0.46278641686200628      Magnetization:  -1.2733052732747148E-002 4th_order_cumulant:  0.99246080665026759      	 ABS_M: 0.0127331 	 0.00851775 	 -0.0015795
+ Temperature:   4.7000002861022949      Hamiltonian: -0.46428921345963847      Magnetization:   3.4972375694885508E-003 4th_order_cumulant:  0.99246569066827173      	 ABS_M: 0.00349724 	 -0.0015028 	 -0.00923586
+ Temperature:   4.7500000000000000      Hamiltonian: -0.45974382678458531      Magnetization:   3.8074276912120233E-003 4th_order_cumulant:  0.99247011220701309      	 ABS_M: 0.00380743 	 0.00454539 	 0.00031019
+ Temperature:   4.8000001907348633      Hamiltonian: -0.44767857021604351      Magnetization:   5.0853866394951746E-003 4th_order_cumulant:  0.99247394746842688      	 ABS_M: 0.00508539 	 0.0120653 	 0.00127796
+ Temperature:   4.8499999046325684      Hamiltonian: -0.44352042271203462      Magnetization:   1.7670733756041244E-002 4th_order_cumulant:  0.99247824577897636      	 ABS_M: 0.0176707 	 0.00415815 	 0.0125853
+ Temperature:   4.9000000953674316      Hamiltonian: -0.45243271125660489      Magnetization:   1.2144197003652438E-002 4th_order_cumulant:  0.99248267816972802      	 ABS_M: 0.0121442 	 -0.00891229 	 -0.0055265
+ Temperature:   4.9500002861022949      Hamiltonian: -0.43375658097986336      Magnetization:  -2.4547417668796818E-002 4th_order_cumulant:  0.99248607567961489      	 ABS_M: 0.0245474 	 0.0186761 	 0.0124032
+ Temperature:   5.0000000000000000      Hamiltonian: -0.43617254893095281      Magnetization:  -4.6695730065260755E-003 4th_order_cumulant:  0.99249054352632937      	 ABS_M: 0.00466957 	 -0.00241597 	 -0.0198778
+ Temperature:   5.0500001907348633      Hamiltonian: -0.42580320191482701      Magnetization:   4.7661160823427284E-004 4th_order_cumulant:  0.99249458666326373      	 ABS_M: 0.000476612 	 0.0103693 	 -0.00419296
+ Temperature:   5.0999999046325684      Hamiltonian: -0.41433404575315491      Magnetization:   2.2255866822056380E-002 4th_order_cumulant:  0.99249795664161111      	 ABS_M: 0.0222559 	 0.0114692 	 0.0217793
+ Temperature:   5.1500000953674316      Hamiltonian: -0.42402136654758987      Magnetization:  -1.8266742095830908E-002 4th_order_cumulant:  0.99250187844805982      	 ABS_M: 0.0182667 	 -0.00968732 	 -0.0039892
+ Temperature:   5.2000002861022949      Hamiltonian: -0.40899905697447730      Magnetization:  -3.7447922537827481E-003 4th_order_cumulant:  0.99250540987747882      	 ABS_M: 0.00374479 	 0.0150223 	 -0.0145219
+ Temperature:   5.2500000000000000      Hamiltonian: -0.40461869529776523      Magnetization:  -6.5664647623789648E-003 4th_order_cumulant:  0.99250937696111818      	 ABS_M: 0.00656646 	 0.00438036 	 0.00282167
+ Temperature:   5.3000001907348633      Hamiltonian: -0.40384982802648905      Magnetization:  -2.3981738900744121E-003 4th_order_cumulant:  0.99251328356772783      	 ABS_M: 0.00239817 	 0.000768867 	 -0.00416829
+ Temperature:   5.3499999046325684      Hamiltonian: -0.38998043124731291      Magnetization:  -3.7102425495920324E-003 4th_order_cumulant:  0.99251725144492808      	 ABS_M: 0.00371024 	 0.0138694 	 0.00131207
+ Temperature:   5.4000000953674316      Hamiltonian: -0.38840013641298821      Magnetization:   2.6419098008976629E-003 4th_order_cumulant:  0.99252032336409757      	 ABS_M: 0.00264191 	 0.00158029 	 -0.00106833
+ Temperature:   5.4500002861022949      Hamiltonian: -0.38565548281463147      Magnetization:  -4.7575270795343610E-003 4th_order_cumulant:  0.99252375085937861      	 ABS_M: 0.00475753 	 0.00274465 	 0.00211562
+ Temperature:   5.5000000000000000      Hamiltonian: -0.38807755907004399      Magnetization:   1.8229237105143827E-003 4th_order_cumulant:  0.99252746827603611      	 ABS_M: 0.00182292 	 -0.00242208 	 -0.00293461
+ Temperature:   5.5500001907348633      Hamiltonian: -0.36947969652436047      Magnetization:  -1.2640352376192023E-002 4th_order_cumulant:  0.99253033314842276      	 ABS_M: 0.0126404 	 0.0185979 	 0.0108175
+ Temperature:   5.5999999046325684      Hamiltonian: -0.37336465983900818      Magnetization:   1.4852341556994123E-002 4th_order_cumulant:  0.99253351376894594      	 ABS_M: 0.0148523 	 -0.00388496 	 0.0022119
+ Temperature:   5.6500000953674316      Hamiltonian: -0.37179416390093500      Magnetization:   2.3353747692836827E-002 4th_order_cumulant:  0.99253706410876130      	 ABS_M: 0.0233537 	 0.0015705 	 0.0085014
+ Temperature:   5.7000002861022949      Hamiltonian: -0.37711127803381095      Magnetization:   2.4152220371057700E-002 4th_order_cumulant:  0.99254065910828715      	 ABS_M: 0.0241522 	 -0.00531711 	 0.0007985
+ Temperature:   5.7500000000000000      Hamiltonian: -0.35833328494184430      Magnetization:   1.0179210386255797E-002 4th_order_cumulant:  0.99254388916963177      	 ABS_M: 0.0101792 	 0.018778 	 -0.013973
+ Temperature:   5.8000001907348633      Hamiltonian: -0.36454099934820222      Magnetization:   4.8236453782872848E-003 4th_order_cumulant:  0.99254737218738887      	 ABS_M: 0.00482365 	 -0.00620771 	 -0.00535555
+ Temperature:   5.8499999046325684      Hamiltonian: -0.35116048110936482      Magnetization:   1.1983175569590366E-003 4th_order_cumulant:  0.99255101151292668      	 ABS_M: 0.00119832 	 0.0133805 	 -0.00362533
+ Temperature:   5.9000000953674316      Hamiltonian: -0.35709606305439234      Magnetization:  -3.6225398700381727E-003 4th_order_cumulant:  0.99255397431738102      	 ABS_M: 0.00362254 	 -0.00593558 	 0.00242422
+ Temperature:   5.9500002861022949      Hamiltonian: -0.34616500345411022      Magnetization:   1.2501530311877030E-002 4th_order_cumulant:  0.99255661881243318      	 ABS_M: 0.0125015 	 0.0109311 	 0.00887896
+ Temperature:   6.0000000000000000      Hamiltonian: -0.35584232289067896      Magnetization:   8.2246826410986226E-003 4th_order_cumulant:  0.99255962746994386      	 ABS_M: 0.00822468 	 -0.00967732 	 -0.00427682
+ Temperature:   6.0500001907348633      Hamiltonian: -0.34711347019254513      Magnetization:  -1.0034783598708736E-002 4th_order_cumulant:  0.99256304565480713      	 ABS_M: 0.0100348 	 0.00872885 	 0.00181012
+ Temperature:   6.0999999046325684      Hamiltonian: -0.34302226935109670      Magnetization:  -1.2720615777868731E-002 4th_order_cumulant:  0.99256649182948598      	 ABS_M: 0.0127206 	 0.0040912 	 0.0026858
+ Temperature:   6.1500000953674316      Hamiltonian: -0.33301829917608361      Magnetization:  -1.6360630174340294E-003 4th_order_cumulant:  0.99256947364731729      	 ABS_M: 0.00163606 	 0.010004 	 -0.0110845
+ Temperature:   6.2000002861022949      Hamiltonian: -0.34020173661404968      Magnetization:  -1.1619166188484648E-002 4th_order_cumulant:  0.99257274174561716      	 ABS_M: 0.0116192 	 -0.00718344 	 0.00998314
+ Temperature:   6.2500000000000000      Hamiltonian: -0.33290839182400961      Magnetization:   8.2581192317783061E-003 4th_order_cumulant:  0.99257573658141807      	 ABS_M: 0.00825812 	 0.00729334 	 -0.00336108
+ Temperature:   6.3000001907348633      Hamiltonian: -0.33798786770924727      Magnetization:   1.3078620244050496E-002 4th_order_cumulant:  0.99257892608103471      	 ABS_M: 0.0130786 	 -0.00507948 	 0.00482048
+ Temperature:   6.3499999046325684      Hamiltonian: -0.33581509551355793      Magnetization:  -7.8190095137461862E-003 4th_order_cumulant:  0.99258196723916869      	 ABS_M: 0.00781901 	 0.00217277 	 -0.00525959
+ Temperature:   6.4000000953674316      Hamiltonian: -0.32314440726711741      Magnetization:   2.1037596639138486E-003 4th_order_cumulant:  0.99258476598497225      	 ABS_M: 0.00210376 	 0.0126707 	 -0.00571525
+ Temperature:   6.4500002861022949      Hamiltonian: -0.32540690460011351      Magnetization:  -8.3971839256302520E-003 4th_order_cumulant:  0.99258804902248909      	 ABS_M: 0.00839718 	 -0.0022625 	 0.00629342
+ Temperature:   6.5000000000000000      Hamiltonian: -0.31473262354538439      Magnetization:  -2.2419524950613372E-003 4th_order_cumulant:  0.99259063306985196      	 ABS_M: 0.00224195 	 0.0106743 	 -0.00615523
+ Temperature:   6.5500001907348633      Hamiltonian: -0.31282815988474288      Magnetization:  -2.8714949914452354E-003 4th_order_cumulant:  0.99259328089813548      	 ABS_M: 0.00287149 	 0.00190446 	 0.00062954
+ Temperature:   6.5999999046325684      Hamiltonian: -0.32337109887749821      Magnetization:  -1.1336226507734241E-002 4th_order_cumulant:  0.99259607127558624      	 ABS_M: 0.0113362 	 -0.0105429 	 0.00846471
+ Temperature:   6.6500000953674316      Hamiltonian: -0.31190300189216996      Magnetization:  -3.5164124801016837E-003 4th_order_cumulant:  0.99259904455490389      	 ABS_M: 0.00351641 	 0.0114681 	 -0.00781979
+ Temperature:   6.7000002861022949      Hamiltonian: -0.31021312543752960      Magnetization:  -2.8115783814450018E-003 4th_order_cumulant:  0.99260224215223825      	 ABS_M: 0.00281158 	 0.00168988 	 -0.00070483
+ Temperature:   6.7500000000000000      Hamiltonian: -0.30251778653320999      Magnetization:  -9.5231152199747090E-003 4th_order_cumulant:  0.99260510202068397      	 ABS_M: 0.00952312 	 0.00769534 	 0.00671154
+ Temperature:   6.8000001907348633      Hamiltonian: -0.31185409207478959      Magnetization:  -1.0068874384612812E-002 4th_order_cumulant:  0.99260794771024818      	 ABS_M: 0.0100689 	 -0.00933631 	 0.00054578
+ Temperature:   6.8499999046325684      Hamiltonian: -0.29969286100143872      Magnetization:  -1.0466832130849760E-002 4th_order_cumulant:  0.99261056045607809      	 ABS_M: 0.0104668 	 0.0121612 	 0.0003979
+ Temperature:   6.9000000953674316      Hamiltonian: -0.30157255379470316      Magnetization:   9.8426098932479552E-003 4th_order_cumulant:  0.99261312185379902      	 ABS_M: 0.00984261 	 -0.00187969 	 -0.00062419
+ Temperature:   6.9500002861022949      Hamiltonian: -0.29929182144615307      Magnetization:  -4.4711183422041858E-004 4th_order_cumulant:  0.99261584151493731      	 ABS_M: 0.000447112 	 0.00228073 	 -0.0093955
+ Temperature:   7.0000000000000000      Hamiltonian: -0.30378079948158504      Magnetization:   5.8586355920025902E-003 4th_order_cumulant:  0.99261875767421504      	 ABS_M: 0.00585864 	 -0.00448898 	 0.00541153
+ Temperature:   7.0500001907348633      Hamiltonian: -0.29308140673124189      Magnetization:   6.8880309943061251E-003 4th_order_cumulant:  0.99262149817042289      	 ABS_M: 0.00688803 	 0.0106994 	 0.00102939
+ Temperature:   7.0999999046325684      Hamiltonian: -0.29483978447510517      Magnetization:  -8.1678690576571353E-004 4th_order_cumulant:  0.99262440193022339      	 ABS_M: 0.000816787 	 -0.00175838 	 -0.00607124
+ Temperature:   7.1500000953674316      Hamiltonian: -0.28813717523100740      Magnetization:  -5.3651178573290272E-004 4th_order_cumulant:  0.99262733487783328      	 ABS_M: 0.000536512 	 0.00670261 	 -0.000280275
+ Temperature:   7.2000002861022949      Hamiltonian: -0.29324473651836297      Magnetization:   4.5057289216908474E-003 4th_order_cumulant:  0.99262986875389836      	 ABS_M: 0.00450573 	 -0.00510756 	 0.00396922
+ Temperature:   7.2500000000000000      Hamiltonian: -0.28026581241775805      Magnetization:  -2.7231961995480987E-003 4th_order_cumulant:  0.99263223952116886      	 ABS_M: 0.0027232 	 0.0129789 	 -0.00178253
+ Temperature:   7.3000001907348633      Hamiltonian: -0.28004563891894407      Magnetization:   2.2529924693438197E-004 4th_order_cumulant:  0.99263508521769783      	 ABS_M: 0.000225299 	 0.000220173 	 -0.0024979
+ Temperature:   7.3499999046325684      Hamiltonian: -0.28632224680685814      Magnetization:  -1.3535885151574266E-002 4th_order_cumulant:  0.99263790062286206      	 ABS_M: 0.0135359 	 -0.00627661 	 0.0133106
+ Temperature:   7.4000000953674316      Hamiltonian: -0.27781282339448138      Magnetization:   1.2965486743982006E-002 4th_order_cumulant:  0.99264069296163659      	 ABS_M: 0.0129655 	 0.00850942 	 -0.0005704
+ Temperature:   7.4500002861022949      Hamiltonian: -0.27583979004411552      Magnetization:  -7.5773120627071261E-003 4th_order_cumulant:  0.99264327265708585      	 ABS_M: 0.00757731 	 0.00197303 	 -0.00538819
+ Temperature:   7.5000000000000000      Hamiltonian: -0.27626651702796945      Magnetization:  -1.7394405504875980E-002 4th_order_cumulant:  0.99264588006106425      	 ABS_M: 0.0173944 	 -0.000426727 	 0.00981709
+ Temperature:   7.5500001907348633      Hamiltonian: -0.27004875025807862      Magnetization:   7.4284391499139860E-003 4th_order_cumulant:  0.99264832462781127      	 ABS_M: 0.00742844 	 0.00621777 	 -0.00996596
+ Temperature:   7.5999999046325684      Hamiltonian: -0.28023175857422278      Magnetization:  -1.1673643993882826E-003 4th_order_cumulant:  0.99265076692310361      	 ABS_M: 0.00116736 	 -0.010183 	 -0.00626108
+ Temperature:   7.6500000953674316      Hamiltonian: -0.26754319698060269      Magnetization:   2.7746399630562591E-003 4th_order_cumulant:  0.99265324058571880      	 ABS_M: 0.00277464 	 0.0126886 	 0.00160728
+ Temperature:   7.7000002861022949      Hamiltonian: -0.26786306708120283      Magnetization:   1.8214544865619224E-003 4th_order_cumulant:  0.99265541815575264      	 ABS_M: 0.00182145 	 -0.00031987 	 -0.00095319
+ Temperature:   7.7500000000000000      Hamiltonian: -0.27516141192292315      Magnetization:   1.0132108538351354E-002 4th_order_cumulant:  0.99265851430912477      	 ABS_M: 0.0101321 	 -0.00729834 	 0.00831065
+ Temperature:   7.8000001907348633      Hamiltonian: -0.26159145760018626      Magnetization:  -4.6155643420540881E-003 4th_order_cumulant:  0.99266107815800264      	 ABS_M: 0.00461556 	 0.01357 	 -0.00551654
+ Temperature:   7.8499999046325684      Hamiltonian: -0.25598455611652499      Magnetization:  -4.6972156728803454E-003 4th_order_cumulant:  0.99266379946163130      	 ABS_M: 0.00469722 	 0.0056069 	 8.166e-05
+ Temperature:   7.9000000953674316      Hamiltonian: -0.26874643139931431      Magnetization:   1.0722641069261130E-004 4th_order_cumulant:  0.99266660237960158      	 ABS_M: 0.000107226 	 -0.0127619 	 -0.00458999
+ Temperature:   7.9500002861022949      Hamiltonian: -0.26138945306924061      Magnetization:  -2.3469221527123328E-003 4th_order_cumulant:  0.99266950996315251      	 ABS_M: 0.00234692 	 0.00735698 	 0.00223969
+ Temperature:   8.0000000000000000      Hamiltonian: -0.25237078342895419      Magnetization:  -1.2499146003461358E-003 4th_order_cumulant:  0.99267237417102383      	 ABS_M: 0.00124991 	 0.00901867 	 -0.00109701
+ Temperature:   8.0500001907348633      Hamiltonian: -0.26264285930911607      Magnetization:   1.2812304700843696E-003 4th_order_cumulant:  0.99267504179643695      	 ABS_M: 0.00128123 	 -0.0102721 	 3.132e-05
+ Temperature:   8.1000003814697266      Hamiltonian: -0.24219721902905172      Magnetization:  -1.0692851074523904E-002 4th_order_cumulant:  0.99267729668915683      	 ABS_M: 0.0106929 	 0.0204456 	 0.00941167
+ Temperature:   8.1500005722045898      Hamiltonian: -0.24366711440967234      Magnetization:  -2.2428428570480394E-003 4th_order_cumulant:  0.99267942713475510      	 ABS_M: 0.00224284 	 -0.0014699 	 -0.00845006
+ Temperature:   8.1999998092651367      Hamiltonian: -0.24478920768928766      Magnetization:   9.6800186665178586E-003 4th_order_cumulant:  0.99268164123047486      	 ABS_M: 0.00968002 	 -0.00112209 	 0.00743718
+ Temperature:   8.2500000000000000      Hamiltonian: -0.25234830725324514      Magnetization:  -6.2990430856458349E-003 4th_order_cumulant:  0.99268402429798119      	 ABS_M: 0.00629904 	 -0.0075591 	 -0.00338098
+ Temperature:   8.3000001907348633      Hamiltonian: -0.23870633552042583      Magnetization:   5.4934005401428680E-004 4th_order_cumulant:  0.99268602365996106      	 ABS_M: 0.00054934 	 0.013642 	 -0.0057497
+ Temperature:   8.3500003814697266      Hamiltonian: -0.25339533134899250      Magnetization:  -1.0078604697811655E-002 4th_order_cumulant:  0.99268863086628834      	 ABS_M: 0.0100786 	 -0.014689 	 0.00952926
+ Temperature:   8.4000005722045898      Hamiltonian: -0.24829668391142731      Magnetization:  -2.5251818922609032E-003 4th_order_cumulant:  0.99269086986648203      	 ABS_M: 0.00252518 	 0.00509865 	 -0.00755342
+ Temperature:   8.4499998092651367      Hamiltonian: -0.25107712182318614      Magnetization:  -5.0406777627956599E-004 4th_order_cumulant:  0.99269334421430100      	 ABS_M: 0.000504068 	 -0.00278044 	 -0.00202111
+ Temperature:   8.5000000000000000      Hamiltonian: -0.24256788792377848      Magnetization:  -5.1258623682465037E-003 4th_order_cumulant:  0.99269601736999824      	 ABS_M: 0.00512586 	 0.00850923 	 0.00462179
+ Temperature:   8.5500001907348633      Hamiltonian: -0.24030261824824878      Magnetization:   2.9745292834004963E-003 4th_order_cumulant:  0.99269831875036629      	 ABS_M: 0.00297453 	 0.00226527 	 -0.00215133
+ Temperature:   8.6000003814697266      Hamiltonian: -0.22837802230653512      Magnetization:   3.5991675707700531E-003 4th_order_cumulant:  0.99270055032321647      	 ABS_M: 0.00359917 	 0.0119246 	 0.00062464
+ Temperature:   8.6500005722045898      Hamiltonian: -0.23641006254722352      Magnetization:  -1.4659001380194206E-002 4th_order_cumulant:  0.99270295775859374      	 ABS_M: 0.014659 	 -0.00803204 	 0.0110598
+ Temperature:   8.6999998092651367      Hamiltonian: -0.24938723882910230      Magnetization:  -4.5541841250215662E-003 4th_order_cumulant:  0.99270553994643018      	 ABS_M: 0.00455418 	 -0.0129772 	 -0.0101048
+ Temperature:   8.7500000000000000      Hamiltonian: -0.23258519550373172      Magnetization:   4.5485128252480463E-003 4th_order_cumulant:  0.99270789091387990      	 ABS_M: 0.00454851 	 0.016802 	 -5.67e-06
+ Temperature:   8.8000001907348633      Hamiltonian: -0.22450998179992973      Magnetization:   5.7576394298878945E-003 4th_order_cumulant:  0.99271016499472753      	 ABS_M: 0.00575764 	 0.00807521 	 0.00120913
+ Temperature:   8.8500003814697266      Hamiltonian: -0.23507137906221562      Magnetization:   1.2350309689678592E-002 4th_order_cumulant:  0.99271260995831634      	 ABS_M: 0.0123503 	 -0.0105614 	 0.00659266
+ Temperature:   8.9000005722045898      Hamiltonian: -0.23452881947467286      Magnetization:   4.5714820360889018E-003 4th_order_cumulant:  0.99271477197003599      	 ABS_M: 0.00457148 	 0.00054256 	 -0.00777882
+ Temperature:   8.9499998092651367      Hamiltonian: -0.23627905513780428      Magnetization:  -9.3230486877806853E-003 4th_order_cumulant:  0.99271729289403010      	 ABS_M: 0.00932305 	 -0.00175024 	 0.00475157
+ Temperature:   9.0000000000000000      Hamiltonian: -0.22537185592273654      Magnetization:  -9.8690421570107462E-003 4th_order_cumulant:  0.99271951866336705      	 ABS_M: 0.00986904 	 0.0109072 	 0.00054599
+ Temperature:   9.0500001907348633      Hamiltonian: -0.22694932221649877      Magnetization:  -8.2224442428462038E-003 4th_order_cumulant:  0.99272191061619908      	 ABS_M: 0.00822244 	 -0.00157747 	 -0.0016466
+ Temperature:   9.1000003814697266      Hamiltonian: -0.21524255975503462      Magnetization:   2.2075131258712053E-003 4th_order_cumulant:  0.99272385158434917      	 ABS_M: 0.00220751 	 0.0117068 	 -0.00601493
+ Temperature:   9.1500005722045898      Hamiltonian: -0.22728974011812120      Magnetization:  -1.0699916679482408E-002 4th_order_cumulant:  0.99272585687841119      	 ABS_M: 0.0106999 	 -0.0120472 	 0.00849239
+ Temperature:   9.1999998092651367      Hamiltonian: -0.21915296546468935      Magnetization:   8.5613562513018847E-003 4th_order_cumulant:  0.99272804061461972      	 ABS_M: 0.00856136 	 0.00813677 	 -0.00213854
+ Temperature:   9.2500000000000000      Hamiltonian: -0.22364966449946039      Magnetization:  -2.9173634599607333E-004 4th_order_cumulant:  0.99272982179402824      	 ABS_M: 0.000291736 	 -0.0044967 	 -0.00826962
+ Temperature:   9.3000001907348633      Hamiltonian: -0.22562849452600781      Magnetization:   9.0006057931820930E-003 4th_order_cumulant:  0.99273213653063552      	 ABS_M: 0.00900061 	 -0.00197883 	 0.00870887
+ Temperature:   9.3500003814697266      Hamiltonian: -0.22395347661710197      Magnetization:   8.5106386813405179E-003 4th_order_cumulant:  0.99273407903356636      	 ABS_M: 0.00851064 	 0.00167502 	 -0.00048997
+ Temperature:   9.4000005722045898      Hamiltonian: -0.21107771802307215      Magnetization:  -1.5089002243956040E-003 4th_order_cumulant:  0.99273631644788718      	 ABS_M: 0.0015089 	 0.0128758 	 -0.00700174
+ Temperature:   9.4499998092651367      Hamiltonian: -0.21334582738621913      Magnetization:  -5.1269767015660059E-003 4th_order_cumulant:  0.99273865005219752      	 ABS_M: 0.00512698 	 -0.00226811 	 0.00361808
+ Temperature:   9.5000000000000000      Hamiltonian: -0.21189566751292790      Magnetization:   3.5476493831765373E-003 4th_order_cumulant:  0.99274060764381800      	 ABS_M: 0.00354765 	 0.00145016 	 -0.00157933
+ Temperature:   9.5500001907348633      Hamiltonian: -0.21425331086980490      Magnetization:   2.4248707264661195E-004 4th_order_cumulant:  0.99274267215991552      	 ABS_M: 0.000242487 	 -0.00235764 	 -0.00330516
+ Temperature:   9.6000003814697266      Hamiltonian: -0.21330022270798235      Magnetization:   7.4365613261051023E-004 4th_order_cumulant:  0.99274472646854961      	 ABS_M: 0.000743656 	 0.000953088 	 0.000501169
+ Temperature:   9.6500005722045898      Hamiltonian: -0.21133487578472981      Magnetization:  -1.5340459975604279E-003 4th_order_cumulant:  0.99274714763479999      	 ABS_M: 0.00153405 	 0.00196535 	 0.000790394
+ Temperature:   9.6999998092651367      Hamiltonian: -0.20959778452930913      Magnetization:   6.1973637258437879E-003 4th_order_cumulant:  0.99274933016926115      	 ABS_M: 0.00619736 	 0.00173709 	 0.00466331
+ Temperature:   9.7500000000000000      Hamiltonian: -0.21318515973100827      Magnetization:   4.7800040603707163E-003 4th_order_cumulant:  0.99275176667781340      	 ABS_M: 0.00478 	 -0.00358738 	 -0.00141736
+ Temperature:   9.8000001907348633      Hamiltonian: -0.20783682711187079      Magnetization:  -3.0032212108740560E-003 4th_order_cumulant:  0.99275394264375383      	 ABS_M: 0.00300322 	 0.00534833 	 -0.00177678
+ Temperature:   9.8500003814697266      Hamiltonian: -0.20878425330979863      Magnetization:   1.1408881685608030E-004 4th_order_cumulant:  0.99275634056680484      	 ABS_M: 0.000114089 	 -0.000947426 	 -0.00288913
+ Temperature:   9.9000005722045898      Hamiltonian: -0.21886385795708296      Magnetization:   3.4235857670127635E-003 4th_order_cumulant:  0.99275880216364920      	 ABS_M: 0.00342359 	 -0.0100796 	 0.0033095
+ Temperature:   9.9499998092651367      Hamiltonian: -0.20264087091965557      Magnetization:  -6.1690138892848906E-003 4th_order_cumulant:  0.99276077746456726      	 ABS_M: 0.00616901 	 0.016223 	 0.00274542
+ Temperature:   10.000000000000000      Hamiltonian: -0.19764159399798314      Magnetization:   2.7729748982204799E-003 4th_order_cumulant:  0.99276322788226923      	 ABS_M: 0.00277297 	 0.00499928 	 -0.00339604
