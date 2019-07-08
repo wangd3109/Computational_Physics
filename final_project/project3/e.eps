@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
 %%Title: e.eps
-%%Creator: gnuplot 5.2 patchlevel 6
-%%CreationDate: Sun Jul  7 07:02:46 2019
+%%Creator: gnuplot 5.0 patchlevel 3
+%%CreationDate: Mon Jul  8 17:15:59 2019
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
 %%Orientation: Landscape
@@ -50,7 +50,7 @@ gnudict begin
   } if
 } def
 %
-% Gnuplot Prolog Version 5.2 (Dec 2017)
+% Gnuplot Prolog Version 5.1 (Oct 2015)
 %
 %/SuppressPDFMark true def
 %
@@ -307,7 +307,7 @@ gnudict begin
   ColR ColG ColB setrgbcolor} def
 /BoxColFill {gsave Rec PolyFill} def
 /PolyFill {gsave Density fill grestore grestore} def
-/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+/h {rlineto rlineto rlineto gsave closepath fill grestore} bind def
 %
 % PostScript Level 1 Pattern Fill routine for rectangles
 % Usage: x y w h s a XX PatternFill
@@ -431,27 +431,15 @@ Level1 {Level1PatternFill} {Level2PatternFill} ifelse
 dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
 currentdict end definefont pop
 %
-/Metrics {ExtendTextBox Gswidth} def
-/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
-/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
-/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
-/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
-/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
-/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
-/GLwidth2 {0 Gwidth AddGlyphWidth} def
-/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
-/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
-/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
-                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
 /MFshow {
    { dup 5 get 3 ge
      { 5 get 3 eq {gsave} {grestore} ifelse }
      {dup dup 0 get findfont exch 1 get scalefont setfont
      [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
-     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     get exch 4 get {textshow} {stringwidth pop 0 R} ifelse }if dup 5 get 0 eq
      {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
-     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
-     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get stringwidth pop -2 div
+     dup 0 R} {dup 6 get stringwidth pop -2 div 0 R 6 get
      textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
      pop aload pop M} ifelse }ifelse }ifelse }
      ifelse }
@@ -480,39 +468,42 @@ systemdict /pdfmark known not {
 SDict begin [
   /Title (e.eps)
   /Subject (gnuplot plot)
-  /Creator (gnuplot 5.2 patchlevel 6)
+  /Creator (gnuplot 5.0 patchlevel 3)
+  /Author (duowang)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Sun Jul  7 07:02:46 2019)
+  /CreationDate (Mon Jul  8 17:15:59 2019)
   /DOCINFO pdfmark
 end
 } ifelse
 %
-% Support for boxed text - Ethan A Merritt Sep 2016
+% Support for boxed text - Ethan A Merritt May 2005
 %
 /InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
            userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
 	   /Boxing true def } def
-/ExtendTextBox { dup type /stringtype eq
-    { Boxing { gsave dup false charpath pathbbox
+/ExtendTextBox { Boxing
+    { gsave dup false charpath pathbbox
       dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
       dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
       dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
       dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
-      grestore } if }
-    {} ifelse} def
+      grestore } if } def
 /PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
                TBx1 TBxmargin sub TBy2 TBymargin add L
 	       TBx2 TBxmargin add TBy2 TBymargin add L
 	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
 /DrawTextBox { PopTextBox stroke /Boxing false def} def
-/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+/FillTextBox { gsave PopTextBox 1 1 1 setrgbcolor fill grestore /Boxing false def} def
 0 0 0 0 InitTextBox
 /TBxmargin 20 def
 /TBymargin 20 def
 /Boxing false def
 /textshow { ExtendTextBox Gshow } def
 %
+% redundant definitions for compatibility with prologue.ps older than 5.0.2
+/LTB {BL [] LCb DL} def
+/LTb {PL [] LCb DL} def
 end
 %%EndProlog
 %%Page: 1 1
@@ -536,260 +527,238 @@ LCb setrgbcolor
 -63 0 V
 stroke
 860 640 M
+[ [(Helvetica) 200.0 0.0 true true 0 (-2.2)]
+] -66.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+980 1056 M
+63 0 V
+5796 0 R
+-63 0 V
+stroke
+860 1056 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-2)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
-/vshift -66 def
 1.000 UL
 LTb
 LCb setrgbcolor
-980 1107 M
+980 1472 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 1107 M
+860 1472 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-1.8)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 1573 M
+980 1888 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 1573 M
+860 1888 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-1.6)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 2040 M
+980 2304 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 2040 M
+860 2304 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-1.4)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 2506 M
+980 2720 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 2506 M
+860 2720 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-1.2)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 2973 M
+980 3135 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 2973 M
+860 3135 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-1)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 3439 M
+980 3551 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 3439 M
+860 3551 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-0.8)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 3906 M
+980 3967 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 3906 M
+860 3967 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-0.6)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 4372 M
+980 4383 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 4372 M
+860 4383 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-0.4)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-980 4839 M
+980 4799 M
 63 0 V
 5796 0 R
 -63 0 V
 stroke
-860 4839 M
+860 4799 M
 [ [(Helvetica) 200.0 0.0 true true 0 (-0.2)]
 ] -66.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-1312 640 M
+1566 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-1312 440 M
+1566 440 M
+[ [(Helvetica) 200.0 0.0 true true 0 ( 0.5)]
+] -66.7 MCshow
+1.000 UL
+LTb
+LCb setrgbcolor
+2152 640 M
+0 63 V
+0 4096 R
+0 -63 V
+stroke
+2152 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 1)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-1864 640 M
+2738 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-1864 440 M
+2738 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 1.5)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-2417 640 M
+3324 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-2417 440 M
+3324 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 2)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-2970 640 M
+3910 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-2970 440 M
+3910 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 2.5)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-3523 640 M
+4495 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-3523 440 M
+4495 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 3)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-4075 640 M
+5081 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-4075 440 M
+5081 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 3.5)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-4628 640 M
+5667 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-4628 440 M
+5667 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 4)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
-5181 640 M
+6253 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
-5181 440 M
+6253 440 M
 [ [(Helvetica) 200.0 0.0 true true 0 ( 4.5)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
-1.000 UL
-LTb
-LCb setrgbcolor
-5734 640 M
-0 63 V
-0 4136 R
-0 -63 V
-stroke
-5734 440 M
-[ [(Helvetica) 200.0 0.0 true true 0 ( 5)]
-] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
-1.000 UL
-LTb
-LCb setrgbcolor
-6286 640 M
-0 63 V
-0 4136 R
-0 -63 V
-stroke
-6286 440 M
-[ [(Helvetica) 200.0 0.0 true true 0 ( 5.5)]
-] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
 6839 640 M
 0 63 V
-0 4136 R
+0 4096 R
 0 -63 V
 stroke
 6839 440 M
-[ [(Helvetica) 200.0 0.0 true true 0 ( 6)]
+[ [(Helvetica) 200.0 0.0 true true 0 ( 5)]
 ] -66.7 MCshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UL
 LTb
 LCb setrgbcolor
 1.000 UL
 LTB
 LCb setrgbcolor
-980 4839 N
+980 4799 N
 980 640 L
 5859 0 V
-0 4199 V
+0 4159 V
 -5859 0 V
 Z stroke
 1.000 UP
@@ -797,26 +766,24 @@ Z stroke
 LTb
 LCb setrgbcolor
 LCb setrgbcolor
-180 2739 M
+160 2719 M
 currentpoint gsave translate -270 rotate 0 0 moveto
 [ [(Helvetica) 240.0 0.0 true true 0 (Energy)]
 ] -80.0 MCshow
 grestore
-/Helvetica findfont 200 scalefont setfont
 LTb
 LCb setrgbcolor
 3909 140 M
 [ [(Helvetica) 240.0 0.0 true true 0 (Temperature)]
 ] -80.0 MCshow
-/Helvetica findfont 200 scalefont setfont
 LTb
 1.000 UL
 LTb
 LCb setrgbcolor
-1100 3976 N
-0 800 V
+1100 3736 N
+0 1000 V
 1383 0 V
-0 -800 V
+0 -1000 V
 -1383 0 V
 Z stroke
 % Begin plot #1
@@ -825,391 +792,452 @@ Z stroke
 LTb
 LCa setrgbcolor
 LCb setrgbcolor
-2483 4576 M
+2483 4536 M
 [ [(Helvetica) 200.0 0.0 true true 0 (size 32)]
 [(Helvetica) 160.0 100.0 true true 0 (2)]
 ] -86.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UP
 3.000 UL
 LTb
 LCa setrgbcolor
-1220 4576 M
-303 0 V
-980 640 M
-111 1 V
-110 2 V
-111 4 V
-110 9 V
-111 8 V
-110 22 V
-111 33 V
-110 39 V
-111 50 V
-110 75 V
-111 98 V
-111 95 V
-110 154 V
-111 214 V
-110 290 V
-111 391 V
-110 273 V
-111 311 V
-110 173 V
-111 184 V
-110 150 V
-111 73 V
-111 124 V
-110 69 V
-111 87 V
-110 79 V
-111 72 V
-110 42 V
-111 63 V
-110 38 V
-111 50 V
-111 64 V
-110 23 V
-111 53 V
-110 31 V
-111 47 V
-110 20 V
-111 31 V
-110 20 V
-111 17 V
-110 36 V
-111 26 V
-111 23 V
-110 34 V
-111 15 V
-110 20 V
-111 18 V
-110 6 V
-111 35 V
-110 9 V
-111 22 V
-110 5 V
-111 18 V
-980 640 TriU
-1091 641 TriU
-1201 643 TriU
-1312 647 TriU
-1422 656 TriU
-1533 664 TriU
-1643 686 TriU
-1754 719 TriU
-1864 758 TriU
-1975 808 TriU
-2085 883 TriU
-2196 981 TriU
-2307 1076 TriU
-2417 1230 TriU
-2528 1444 TriU
-2638 1734 TriU
-2749 2125 TriU
-2859 2398 TriU
-2970 2709 TriU
-3080 2882 TriU
-3191 3066 TriU
-3301 3216 TriU
-3412 3289 TriU
-3523 3413 TriU
-3633 3482 TriU
-3744 3569 TriU
-3854 3648 TriU
-3965 3720 TriU
-4075 3762 TriU
-4186 3825 TriU
-4296 3863 TriU
-4407 3913 TriU
-4518 3977 TriU
-4628 4000 TriU
-4739 4053 TriU
-4849 4084 TriU
-4960 4131 TriU
-5070 4151 TriU
-5181 4182 TriU
-5291 4202 TriU
-5402 4219 TriU
-5512 4255 TriU
-5623 4281 TriU
-5734 4304 TriU
-5844 4338 TriU
-5955 4353 TriU
-6065 4373 TriU
-6176 4391 TriU
-6286 4397 TriU
-6397 4432 TriU
-6507 4441 TriU
-6618 4463 TriU
-6728 4468 TriU
-6839 4486 TriU
-1372 4576 TriU
+1273 1056 TriU
+1332 1056 TriU
+1390 1056 TriU
+1449 1056 TriU
+1507 1056 TriU
+1566 1056 TriU
+1624 1056 TriU
+1683 1056 TriU
+1742 1056 TriU
+1800 1056 TriU
+1859 1056 TriU
+1917 1057 TriU
+1976 1058 TriU
+2035 1059 TriU
+2093 1060 TriU
+2152 1062 TriU
+2210 1065 TriU
+2269 1070 TriU
+2328 1074 TriU
+2386 1077 TriU
+2445 1086 TriU
+2503 1097 TriU
+2562 1105 TriU
+2621 1127 TriU
+2679 1142 TriU
+2738 1161 TriU
+2796 1179 TriU
+2855 1205 TriU
+2913 1236 TriU
+2972 1270 TriU
+3031 1299 TriU
+3089 1364 TriU
+3148 1400 TriU
+3206 1448 TriU
+3265 1512 TriU
+3324 1579 TriU
+3382 1665 TriU
+3441 1771 TriU
+3499 1937 TriU
+3558 2027 TriU
+3617 2112 TriU
+3675 2388 TriU
+3734 2544 TriU
+3792 2627 TriU
+3851 2809 TriU
+3910 2904 TriU
+3968 2965 TriU
+4027 3062 TriU
+4085 3165 TriU
+4144 3219 TriU
+4202 3283 TriU
+4261 3345 TriU
+4320 3396 TriU
+4378 3414 TriU
+4437 3463 TriU
+4495 3528 TriU
+4554 3548 TriU
+4613 3589 TriU
+4671 3621 TriU
+4730 3669 TriU
+4788 3692 TriU
+4847 3738 TriU
+4906 3766 TriU
+4964 3799 TriU
+5023 3824 TriU
+5081 3839 TriU
+5140 3870 TriU
+5198 3894 TriU
+5257 3916 TriU
+5316 3932 TriU
+5374 3964 TriU
+5433 3974 TriU
+5491 3995 TriU
+5550 4031 TriU
+5609 4049 TriU
+5667 4053 TriU
+5726 4077 TriU
+5784 4098 TriU
+5843 4107 TriU
+5902 4125 TriU
+5960 4143 TriU
+6019 4168 TriU
+6077 4169 TriU
+6136 4185 TriU
+6195 4209 TriU
+6253 4215 TriU
+6312 4219 TriU
+6370 4231 TriU
+6429 4246 TriU
+6487 4244 TriU
+6546 4266 TriU
+6605 4280 TriU
+6663 4296 TriU
+6722 4303 TriU
+6780 4315 TriU
+6839 4320 TriU
+1372 4536 TriU
 % End plot #1
 % Begin plot #2
 1.000 UP
 3.000 UL
 LTb
-0.58 0.00 0.83 C
-LCb setrgbcolor
-2483 4376 M
+0.58 0.00 0.83 C LCb setrgbcolor
+2483 4336 M
 [ [(Helvetica) 200.0 0.0 true true 0 (16)]
 [(Helvetica) 160.0 100.0 true true 0 (2)]
 ] -86.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UP
 3.000 UL
 LTb
-0.58 0.00 0.83 C
-1220 4376 M
-303 0 V
-980 640 M
-111 1 V
-110 2 V
-111 3 V
-110 8 V
-111 14 V
-110 16 V
-111 36 V
-110 35 V
-111 60 V
-110 78 V
-111 90 V
-111 97 V
-110 162 V
-111 220 V
-110 184 V
-111 445 V
-110 305 V
-111 313 V
-110 122 V
-111 214 V
-110 139 V
-111 95 V
-111 126 V
-110 83 V
-111 106 V
-110 45 V
-111 58 V
-110 70 V
-111 55 V
-110 37 V
-111 68 V
-111 44 V
-110 39 V
-111 34 V
-110 44 V
-111 40 V
-110 14 V
-111 32 V
-110 42 V
-111 28 V
-110 11 V
-111 25 V
-111 39 V
-110 12 V
-111 12 V
-110 28 V
-111 24 V
-110 17 V
-111 10 V
-110 29 V
-111 11 V
-110 20 V
-111 11 V
-980 640 TriU
-1091 641 TriU
-1201 643 TriU
-1312 646 TriU
-1422 654 TriU
-1533 668 TriU
-1643 684 TriU
-1754 720 TriU
-1864 755 TriU
-1975 815 TriU
-2085 893 TriU
-2196 983 TriU
-2307 1080 TriU
-2417 1242 TriU
-2528 1462 TriU
-2638 1646 TriU
-2749 2091 TriU
-2859 2396 TriU
-2970 2709 TriU
-3080 2831 TriU
-3191 3045 TriU
-3301 3184 TriU
-3412 3279 TriU
-3523 3405 TriU
-3633 3488 TriU
-3744 3594 TriU
-3854 3639 TriU
-3965 3697 TriU
-4075 3767 TriU
-4186 3822 TriU
-4296 3859 TriU
-4407 3927 TriU
-4518 3971 TriU
-4628 4010 TriU
-4739 4044 TriU
-4849 4088 TriU
-4960 4128 TriU
-5070 4142 TriU
-5181 4174 TriU
-5291 4216 TriU
-5402 4244 TriU
-5512 4255 TriU
-5623 4280 TriU
-5734 4319 TriU
-5844 4331 TriU
-5955 4343 TriU
-6065 4371 TriU
-6176 4395 TriU
-6286 4412 TriU
-6397 4422 TriU
-6507 4451 TriU
-6618 4462 TriU
-6728 4482 TriU
-6839 4493 TriU
-1372 4376 TriU
+0.58 0.00 0.83 C 1273 1056 TriU
+1332 1056 TriU
+1390 1056 TriU
+1449 1056 TriU
+1507 1056 TriU
+1566 1056 TriU
+1624 1056 TriU
+1683 1056 TriU
+1742 1056 TriU
+1800 1615 TriU
+1859 1056 TriU
+1917 1056 TriU
+1976 1057 TriU
+2035 1058 TriU
+2093 1061 TriU
+2152 1064 TriU
+2210 1065 TriU
+2269 1068 TriU
+2328 1076 TriU
+2386 1081 TriU
+2445 1090 TriU
+2503 1096 TriU
+2562 1114 TriU
+2621 1124 TriU
+2679 1135 TriU
+2738 1170 TriU
+2796 1195 TriU
+2855 1219 TriU
+2913 1224 TriU
+2972 1270 TriU
+3031 1313 TriU
+3089 1371 TriU
+3148 1377 TriU
+3206 1461 TriU
+3265 1560 TriU
+3324 1605 TriU
+3382 1642 TriU
+3441 1755 TriU
+3499 1883 TriU
+3558 2078 TriU
+3617 2080 TriU
+3675 2355 TriU
+3734 2734 TriU
+3792 2540 TriU
+3851 2875 TriU
+3910 2920 TriU
+3968 2872 TriU
+4027 3100 TriU
+4085 3168 TriU
+4144 3184 TriU
+4202 3256 TriU
+4261 3323 TriU
+4320 3350 TriU
+4378 3463 TriU
+4437 3476 TriU
+4495 3511 TriU
+4554 3611 TriU
+4613 3598 TriU
+4671 3668 TriU
+4730 3639 TriU
+4788 3718 TriU
+4847 3737 TriU
+4906 3773 TriU
+4964 3786 TriU
+5023 3830 TriU
+5081 3827 TriU
+5140 3869 TriU
+5198 3895 TriU
+5257 3900 TriU
+5316 3961 TriU
+5374 3977 TriU
+5433 3945 TriU
+5491 3995 TriU
+5550 4020 TriU
+5609 4029 TriU
+5667 4062 TriU
+5726 4089 TriU
+5784 4099 TriU
+5843 4115 TriU
+5902 4126 TriU
+5960 4122 TriU
+6019 4152 TriU
+6077 4164 TriU
+6136 4171 TriU
+6195 4188 TriU
+6253 4214 TriU
+6312 4219 TriU
+6370 4240 TriU
+6429 4253 TriU
+6487 4253 TriU
+6546 4266 TriU
+6605 4284 TriU
+6663 4280 TriU
+6722 4315 TriU
+6780 4312 TriU
+6839 4328 TriU
+1372 4336 TriU
 % End plot #2
 % Begin plot #3
 1.000 UP
 3.000 UL
 LTb
-0.00 0.62 0.45 C
-LCb setrgbcolor
-2483 4176 M
+0.00 0.62 0.45 C LCb setrgbcolor
+2483 4136 M
 [ [(Helvetica) 200.0 0.0 true true 0 (8)]
 [(Helvetica) 160.0 100.0 true true 0 (2)]
 ] -86.7 MRshow
-/Helvetica findfont 200 scalefont setfont
 1.000 UP
 3.000 UL
 LTb
-0.00 0.62 0.45 C
-1220 4176 M
-303 0 V
-980 640 M
-111 1 V
-110 2 V
-111 3 V
-110 8 V
-111 12 V
-110 21 V
-111 30 V
-110 42 V
-111 55 V
-110 63 V
-111 93 V
-111 110 V
-110 155 V
-111 191 V
-110 216 V
-111 240 V
-110 306 V
-111 267 V
-110 255 V
-111 180 V
-110 205 V
-111 132 V
-111 92 V
-110 135 V
-111 102 V
-110 84 V
-111 63 V
-110 41 V
-111 89 V
-110 28 V
-111 57 V
-111 58 V
-110 27 V
-111 39 V
-110 43 V
-111 40 V
-110 18 V
-111 42 V
-110 25 V
-111 22 V
-110 34 V
-111 20 V
-111 26 V
-110 17 V
-111 19 V
-110 16 V
-111 21 V
-110 22 V
-111 23 V
-110 9 V
-111 20 V
-110 18 V
-111 20 V
-980 640 TriU
-1091 641 TriU
-1201 643 TriU
-1312 646 TriU
-1422 654 TriU
-1533 666 TriU
-1643 687 TriU
-1754 717 TriU
-1864 759 TriU
-1975 814 TriU
-2085 877 TriU
-2196 970 TriU
-2307 1080 TriU
-2417 1235 TriU
-2528 1426 TriU
-2638 1642 TriU
-2749 1882 TriU
-2859 2188 TriU
-2970 2455 TriU
-3080 2710 TriU
-3191 2890 TriU
-3301 3095 TriU
-3412 3227 TriU
-3523 3319 TriU
-3633 3454 TriU
-3744 3556 TriU
-3854 3640 TriU
-3965 3703 TriU
-4075 3744 TriU
-4186 3833 TriU
-4296 3861 TriU
-4407 3918 TriU
-4518 3976 TriU
-4628 4003 TriU
-4739 4042 TriU
-4849 4085 TriU
-4960 4125 TriU
-5070 4143 TriU
-5181 4185 TriU
-5291 4210 TriU
-5402 4232 TriU
-5512 4266 TriU
-5623 4286 TriU
-5734 4312 TriU
-5844 4329 TriU
-5955 4348 TriU
-6065 4364 TriU
-6176 4385 TriU
-6286 4407 TriU
-6397 4430 TriU
-6507 4439 TriU
-6618 4459 TriU
-6728 4477 TriU
-6839 4497 TriU
-1372 4176 TriU
+0.00 0.62 0.45 C 1273 1056 TriU
+1332 1056 TriU
+1390 1056 TriU
+1449 1056 TriU
+1507 1056 TriU
+1566 1056 TriU
+1624 1056 TriU
+1683 1056 TriU
+1742 1058 TriU
+1800 1058 TriU
+1859 1058 TriU
+1917 1056 TriU
+1976 1059 TriU
+2035 1058 TriU
+2093 1060 TriU
+2152 1060 TriU
+2210 1061 TriU
+2269 1066 TriU
+2328 1074 TriU
+2386 1085 TriU
+2445 1082 TriU
+2503 1096 TriU
+2562 1115 TriU
+2621 1126 TriU
+2679 1123 TriU
+2738 1141 TriU
+2796 1170 TriU
+2855 1209 TriU
+2913 1229 TriU
+2972 1243 TriU
+3031 1304 TriU
+3089 1371 TriU
+3148 1355 TriU
+3206 1409 TriU
+3265 1451 TriU
+3324 1572 TriU
+3382 1599 TriU
+3441 1686 TriU
+3499 1663 TriU
+3558 1875 TriU
+3617 2150 TriU
+3675 2567 TriU
+3734 2113 TriU
+3792 2360 TriU
+3851 2483 TriU
+3910 2643 TriU
+3968 2912 TriU
+4027 2745 TriU
+4085 2878 TriU
+4144 2997 TriU
+4202 3162 TriU
+4261 3203 TriU
+4320 3250 TriU
+4378 3341 TriU
+4437 3447 TriU
+4495 3554 TriU
+4554 3501 TriU
+4613 3583 TriU
+4671 3648 TriU
+4730 3665 TriU
+4788 3659 TriU
+4847 3626 TriU
+4906 3700 TriU
+4964 3812 TriU
+5023 3788 TriU
+5081 3812 TriU
+5140 3807 TriU
+5198 3918 TriU
+5257 3939 TriU
+5316 3918 TriU
+5374 3941 TriU
+5433 3918 TriU
+5491 3971 TriU
+5550 3955 TriU
+5609 4022 TriU
+5667 4049 TriU
+5726 4038 TriU
+5784 4069 TriU
+5843 4080 TriU
+5902 4095 TriU
+5960 4145 TriU
+6019 4159 TriU
+6077 4190 TriU
+6136 4214 TriU
+6195 4180 TriU
+6253 4251 TriU
+6312 4251 TriU
+6370 4258 TriU
+6429 4230 TriU
+6487 4311 TriU
+6546 4282 TriU
+6605 4293 TriU
+6663 4304 TriU
+6722 4308 TriU
+6780 4312 TriU
+6839 4304 TriU
+1372 4136 TriU
 % End plot #3
+% Begin plot #4
+1.000 UP
+3.000 UL
+LTb
+0.90 0.62 0.00 C LCb setrgbcolor
+2483 3936 M
+[ [(Helvetica) 200.0 0.0 true true 0 (4)]
+[(Helvetica) 160.0 100.0 true true 0 (2)]
+] -86.7 MRshow
+1.000 UP
+3.000 UL
+LTb
+0.90 0.62 0.00 C 1273 1056 TriU
+1332 1055 TriU
+1390 1055 TriU
+1449 1055 TriU
+1507 1055 TriU
+1566 1055 TriU
+1624 1055 TriU
+1683 1055 TriU
+1742 1055 TriU
+1800 1055 TriU
+1859 1055 TriU
+1917 1058 TriU
+1976 1058 TriU
+2035 1058 TriU
+2093 1064 TriU
+2152 1066 TriU
+2210 1072 TriU
+2269 1072 TriU
+2328 1076 TriU
+2386 1084 TriU
+2445 1082 TriU
+2503 1084 TriU
+2562 1090 TriU
+2621 1099 TriU
+2679 1112 TriU
+2738 1127 TriU
+2796 1150 TriU
+2855 1208 TriU
+2913 1235 TriU
+2972 1294 TriU
+3031 1272 TriU
+3089 1289 TriU
+3148 1358 TriU
+3206 1407 TriU
+3265 1440 TriU
+3324 1451 TriU
+3382 1676 TriU
+3441 1763 TriU
+3499 1851 TriU
+3558 1861 TriU
+3617 2002 TriU
+3675 2085 TriU
+3734 2096 TriU
+3792 2204 TriU
+3851 2338 TriU
+3910 2333 TriU
+3968 2376 TriU
+4027 2356 TriU
+4085 2425 TriU
+4144 2500 TriU
+4202 2670 TriU
+4261 2728 TriU
+4320 2870 TriU
+4378 2973 TriU
+4437 3039 TriU
+4495 2939 TriU
+4554 3128 TriU
+4613 3132 TriU
+4671 3167 TriU
+4730 3379 TriU
+4788 3366 TriU
+4847 3301 TriU
+4906 3447 TriU
+4964 3578 TriU
+5023 3572 TriU
+5081 3629 TriU
+5140 3628 TriU
+5198 3553 TriU
+5257 3719 TriU
+5316 3722 TriU
+5374 3757 TriU
+5433 3861 TriU
+5491 3724 TriU
+5550 3978 TriU
+5609 3943 TriU
+5667 3812 TriU
+5726 3960 TriU
+5784 3972 TriU
+5843 4095 TriU
+5902 4060 TriU
+5960 3963 TriU
+6019 4044 TriU
+6077 3981 TriU
+6136 4120 TriU
+6195 4085 TriU
+6253 4154 TriU
+6312 4106 TriU
+6370 4194 TriU
+6429 4232 TriU
+6487 4171 TriU
+6546 4228 TriU
+6605 4245 TriU
+6663 4201 TriU
+6722 4171 TriU
+6780 4270 TriU
+6839 4303 TriU
+1372 3936 TriU
+% End plot #4
 2.000 UL
 LTb
 LCb setrgbcolor
 1.000 UL
 LTB
 LCb setrgbcolor
-980 4839 N
+980 4799 N
 980 640 L
 5859 0 V
-0 4199 V
+0 4159 V
 -5859 0 V
 Z stroke
 1.000 UP
