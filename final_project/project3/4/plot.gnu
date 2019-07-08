@@ -23,4 +23,5 @@ plot \
 './500/data.dat' u 2:4 w p lt 8 lw 3 lc 1 t "500" ,\
 './1000/data.dat' u 2:4 w p lt 8 lw 3 lc 2 t "1000" ,\
 './2000/data.dat' u 2:4 w p lt 8 lw 3 lc 3 t "2000" ,\
+'./5000/data.dat' u 2:4 w p lt 8 lw 3 lc 4 t "5000" ,\
 
