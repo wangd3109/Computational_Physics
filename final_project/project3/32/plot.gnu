@@ -9,7 +9,7 @@ set key samplen 2
 set pointsize 1.0
 set view 0,0
 #set xtics 13,10,43
-#set ytics -50,10,50
+set ytics -2.2,0.2,-0.2
 set xlabel font ",24"
 set xlabel "Temperature"
 set xrange [0:    5]
