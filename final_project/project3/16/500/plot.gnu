@@ -19,8 +19,5 @@ set ylabel "Energy"
 #set arrow 1 from -10 to 10 nohead
 #set title "band"
 plot \
-'./100/data.dat' u 2:4 w p lt 8 lw 3 lc 0 t "100" ,\
-'./500/data.dat' u 2:4 w p lt 8 lw 3 lc 1 t "500" ,\
-'./1000/data.dat' u 2:4 w p lt 8 lw 3 lc 2 t "1000" ,\
-'./2000/data.dat' u 2:4 w p lt 8 lw 3 lc 3 t "2000" ,\
+'./data.dat' u 2:8 w p lt 8 lw 3 lc 0 t "100" ,\
 
