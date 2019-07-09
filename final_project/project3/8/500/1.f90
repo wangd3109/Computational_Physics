@@ -16,6 +16,8 @@ program main
       cont=0
       grid=8
 	steps=500*(grid**2)
+	m4=0
+	m2=0
 
 	!建立文件名为t+k的文件，记录指定温度下的数据
 !      write(filename,*) k
